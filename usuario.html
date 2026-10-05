@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luma - Paquetes turísticos</title>
+
+</head>
+<body>
+    <input type="checkbox" id="tema">
+    <label for="tema">Tema oscuro</label>
+        <input type="checkbox" id="tema">
+    <label for="tema">Tema claro</label>
+
+    <header>
+        <img src="./Imagenes/logo.png"
+            alt="Luma - Viajes que empiezan antes de partir"
+            width="300">
+        <p>Viajes que comienzan antes de partir.</p>
+
+        <nav>
+            <a href="miCuenta.html">Mi cuenta</a>
+            <a href="carrito.html">Carrito</a>
+            <a href="miAdmin.html">Cambiar a Administrador</a>
+            <a href="inicio.html">Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Paquetes turísticos</h1>
+
+        <input type="radio" name="vista" id="vista-tarjetas" checked>
+        <label for="vista-tarjetas">Tarjetas</label>
+        <input type="radio" name="vista" id="vista-lista">
+        <label for="vista-lista">Lista</label>
+
+        <section>
+
+            <article>
+                <!--aca despues vemos bien que imagenes ponemos-->
+                <img src="./Imagenes/fotoCentroBariloche.jpg" alt="Lago y montañas en Bariloche" width="300">
+                <h2>Bariloche</h2>
+                <p>Siete días entre lagos y montañas, con excursión al Cerro Catedral.</p>
+                <ul>
+                    <li>Duración: 7 días</li>
+                    <li>Precio: $ 650.000</li>
+                </ul>
+                <input type="checkbox" id="fav-bariloche">
+                <label for="fav-bariloche">Favorito</label>
+                <button type="button">Agregar al carrito</button>
+            </article>
+
+            <article>
+                <!--aca tambien despues vemos bien que imagenes ponemos-->
+                <img src="./Imagenes/Cataratas_del_Iguazú_en_Argentina.jpg" alt="Cataratas del Iguazú" width="300">
+                <h2>Cataratas del Iguazú</h2>
+                <p>Cinco días recorriendo las cataratas desde ambos lados.</p>
+                <ul>
+                    <li>Duración: 5 días</li>
+                    <li>Precio: $ 480.000</li>
+                </ul>
+                <input type="checkbox" id="fav-iguazu">
+                <label for="fav-iguazu">Favorito</label>
+                <button type="button">Agregar al carrito</button>
+            </article>
+
+            <article>
+                <!--vemos-->
+                <img src="./Imagenes/cancun.jpg" alt="Playa en Cancún" width="300">
+                <h2>Cancún</h2>
+                <p>Diez días all inclusive frente al mar Caribe.</p>
+                <ul>
+                    <li>Duración: 10 días</li>
+                    <li>Precio: $ 1.900.000</li>
+                </ul>
+                <input type="checkbox" id="fav-cancun">
+                <label for="fav-cancun">Favorito</label> <!--me parece que quedo medio raro*/-->
+                <button type="button">Agregar al carrito</button>
+            </article>
+
+            <article>
+                <!--vemos-->
+                <img src="./Imagenes/mendoza.jpg" alt="Viñedos en Mendoza" width="300">
+                <h2>Mendoza</h2>
+                <p>Cuatro días de bodegas, degustaciones y cordillera.</p>
+                <ul>
+                    <li>Duración: 4 días</li>
+                    <li>Precio: $ 390.000</li>
+                </ul>
+                <input type="checkbox" id="fav-mendoza">
+                <label for="fav-mendoza">Favorito</label>
+                <button type="button">Agregar al carrito</button>
+            </article>
+            <article>
+                <a href="PaqueteSantaCruz.html">
+                <img src="./Imagenes/SantaCruz.jpg" alt="El calafate Santa Cruz" width="300">
+                </a>
+                <h2>Santa Cruz</h2>
+                <p>Cuatro días de bodegas, degustaciones y cordillera.</p>
+                <ul>
+                    <li>Duración: 14 días</li>
+                    <li>Precio: $2.000.000</li>
+                </ul>
+                <input type="checkbox" id="fav-SantaCruz">
+                <label for="fav-SantaCruz">Favorito</label>
+                <button type="button">Agregar al carrito</button>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+    <h2>Contacto</h2>
+    <ul>
+        <li>Email: <a href="mailto:contacto@luma.com">contacto@luma.com</a></li>
+        <li>Teléfono: <a href="tel:+541112345678">+54 11 1234-5678</a></li>
+        <li>WhatsApp: <a href="https://wa.me/541112345678">+54 11 1234-5678</a></li>
+        <li>Dirección: Av. Corrientes 1234, CABA</li>
+        <li>Horario: Lunes a Viernes de 9 a 18 h</li>
+    </ul>
+    
+</footer>
+
+</body>
+</html>

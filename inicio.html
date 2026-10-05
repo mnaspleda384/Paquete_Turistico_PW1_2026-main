@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Luma - Ingreso</title>
+</head>
+
+<body>
+    <input type="checkbox" id="tema" class="tema">
+    <label for="tema" class="tema">Tema oscuro</label>
+    <input type="checkbox" id="tema" class="tema">
+    <label for="tema" class="tema">Tema claro</label>
+
+    <header>
+        <img src="./Imagenes/logo.png" 
+            alt="Luma - Viajes que empiezan antes de partir"
+            width="350" class="logo">
+
+        <p>Viajes que comienzan antes de partir.</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h1>Iniciar sesión</h1>
+
+            <form method="post" action="usuario.html">
+
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="username" required>
+                <br>
+                <br>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="password" required>
+                <br>
+                <br>
+                <button type="submit">Ingresar</button> 
+            </form>
+        </section>
+        <section>
+            <h2>¿Primera vez en Luma?</h2>
+            <p>
+                Todavía no existe un usuario.
+                Para comenzar, es necesario crear el primer usuario.
+            </p>
+            <a href="crearUsuario.html">
+                Crear primer usuario</a>
+        </section>
+
+    </main>
+
+    <footer>
+<h2>Contacto</h2>
+    <ul>
+        <li>Email: <a href="mailto:contacto@luma.com">contacto@luma.com</a></li>
+        <li>Teléfono: <a href="tel:+541112345678">+54 11 1234-5678</a></li>
+        <li>WhatsApp: <a href="https://wa.me/541112345678">+54 11 1234-5678</a></li>
+        <li>Dirección: Av. Corrientes 1234, CABA</li>
+        <li>Horario: Lunes a Viernes de 9 a 18 h</li>
+    </ul>
+    
+    </footer>
+
+</body>
+</html>

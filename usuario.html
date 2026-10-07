@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Luma - Paquetes turísticos</title>
 
 </head>
 <body>
-    <input type="checkbox" id="tema">
-    <label for="tema">Tema oscuro</label>
-        <input type="checkbox" id="tema">
-    <label for="tema">Tema claro</label>
-
     <header>
+        <div class="tema">
+            <input type="radio" id="tema-oscuro" name="tema">
+            <label for="tema-oscuro">Tema oscuro</label>
+            <input type="radio" id="tema-claro" name="tema" checked>
+            <label for="tema-claro">Tema claro</label>
+        </div>
+
         <img src="./Imagenes/logo.png"
             alt="Luma - Viajes que empiezan antes de partir"
-            width="300">
-        <p>Viajes que comienzan antes de partir.</p>
+            width="300" class="logo">
 
-        <nav>
+        <nav class="navegacion">
             <a href="miCuenta.html">Mi cuenta</a>
-            <a href="carrito.html">Carrito</a>
+            <!--<a href="carrito.html">Carrito</a>-->
             <a href="miAdmin.html">Cambiar a Administrador</a>
             <a href="inicio.html">Cerrar sesión</a>
         </nav>
@@ -34,9 +36,9 @@
         <input type="radio" name="vista" id="vista-lista">
         <label for="vista-lista">Lista</label>
 
-        <section>
+        <section class="tarjetas">
 
-            <article>
+            <article class="bariloche">
                 <!--aca despues vemos bien que imagenes ponemos-->
                 <img src="./Imagenes/fotoCentroBariloche.jpg" alt="Lago y montañas en Bariloche" width="300">
                 <h2>Bariloche</h2>
@@ -50,7 +52,7 @@
                 <button type="button">Agregar al carrito</button>
             </article>
 
-            <article>
+            <article class="iguazu">
                 <!--aca tambien despues vemos bien que imagenes ponemos-->
                 <img src="./Imagenes/Cataratas_del_Iguazú_en_Argentina.jpg" alt="Cataratas del Iguazú" width="300">
                 <h2>Cataratas del Iguazú</h2>
@@ -64,11 +66,11 @@
                 <button type="button">Agregar al carrito</button>
             </article>
 
-            <article>
+            <article class="cancun">
                 <!--vemos-->
                 <img src="./Imagenes/cancun.jpg" alt="Playa en Cancún" width="300">
                 <h2>Cancún</h2>
-                <p>Diez días all inclusive frente al mar Caribe.</p>
+                <p>Diez días all inclusive en las playas frente al mar Caribe.</p>
                 <ul>
                     <li>Duración: 10 días</li>
                     <li>Precio: $ 1.900.000</li>
@@ -78,7 +80,7 @@
                 <button type="button">Agregar al carrito</button>
             </article>
 
-            <article>
+            <article class="mendoza">
                 <!--vemos-->
                 <img src="./Imagenes/mendoza.jpg" alt="Viñedos en Mendoza" width="300">
                 <h2>Mendoza</h2>
@@ -91,7 +93,8 @@
                 <label for="fav-mendoza">Favorito</label>
                 <button type="button">Agregar al carrito</button>
             </article>
-            <article>
+
+            <article class="santa-cruz">
                 <a href="PaqueteSantaCruz.html">
                 <img src="./Imagenes/SantaCruz.jpg" alt="El calafate Santa Cruz" width="300">
                 </a>

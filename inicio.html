@@ -8,38 +8,38 @@
 </head>
 
 <body>
-    <input type="checkbox" id="tema" class="tema">
-    <label for="tema" class="tema">Tema oscuro</label>
-    <input type="checkbox" id="tema" class="tema">
-    <label for="tema" class="tema">Tema claro</label>
-
+    
     <header>
+        <div class="tema">
+            <input type="radio" id="tema-oscuro" name="tema">
+            <label for="tema-oscuro">Tema oscuro</label>
+            <input type="radio" id="tema-claro" name="tema" checked>
+            <label for="tema-claro">Tema claro</label>
+        </div>
+
         <img src="./Imagenes/logo.png" 
             alt="Luma - Viajes que empiezan antes de partir"
             width="350" class="logo">
 
-        <p>Viajes que comienzan antes de partir.</p>
     </header>
 
     <main>
 
-        <section>
+        <section class="iniciar-sesion">
             <h1>Iniciar sesión</h1>
 
             <form method="post" action="usuario.html">
 
                 <label for="usuario">Usuario:</label>
                 <input type="text" id="usuario" name="username" required>
-                <br>
-                <br>
+               
                 <label for="contrasena">Contraseña:</label>
                 <input type="password" id="contrasena" name="password" required>
-                <br>
-                <br>
+                
                 <button type="submit">Ingresar</button> 
             </form>
         </section>
-        <section>
+        <section class="primera-vez">
             <h2>¿Primera vez en Luma?</h2>
             <p>
                 Todavía no existe un usuario.
@@ -53,7 +53,7 @@
 
     <footer>
 <h2>Contacto</h2>
-    <ul>
+    <ul class="contacto">
         <li>Email: <a href="mailto:contacto@luma.com">contacto@luma.com</a></li>
         <li>Teléfono: <a href="tel:+541112345678">+54 11 1234-5678</a></li>
         <li>WhatsApp: <a href="https://wa.me/541112345678">+54 11 1234-5678</a></li>

@@ -1,23 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
 header{
     background-color: #67b8d8;
-    
+    position: relative;
+    padding-bottom: 15px;
 }
-
-.logo{
-    padding-right: 40em;
-}
-
-
 
 body{
     text-align: center;
 }
 
-.tema{
-    display: flex;
-    justify-content: flex-end;
+footer{
+    background-color: rgb(88, 95, 102);
+    width: 100%;
+    position: relative;
+    margin-top: 41px;
 }
 
-footer{
-    background-color: grey;
+/* para acomodar el logo en todas las paginas*/
+.logo{
+    display: flex;
+    justify-content: start;
+}
+
+/* lo mismo pero para el tema*/
+.tema{
+    display: flex;
+    justify-content: end;
+}
+
+.iniciar-sesion{
+    padding-bottom: 2em;
+    margin-top: 3em;
+}
+
+.iniciar-sesion form{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 12px 2px;
+    max-width: 350px;
+    margin: 0 auto;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.iniciar-sesion button{
+    margin-left: 19em;
+    padding: 5px;
+    justify-self: center;             
+    width: auto;                     
+    padding-left: 20px;
+    padding-right: 20px; 
+}
+
+/* acomoda los labels e inputs*/
+.crear-usuario form{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 12px 2px;
+    max-width: 350px;
+    margin: 0 auto;
+    margin-top: 10px;
+    align-items: center;
+}
+
+/* acomoda el boton de enviar*/
+.crear-usuario button{
+    margin-left: 19em;
+    padding: 5px;
+    justify-self: center;             
+    width: auto;                     
+    padding-left: 30px;
+    padding-right: 30px; 
+}
+
+/* desaparece los puntos del list*/
+.contacto{
+    list-style-type: none;
+}
+
+.navegacion a{
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+    color: rgb(16, 68, 48);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.navegacion a:hover{
+    background-color: #4586a0;
+}
+
+.navegacion{
+    margin-top: 15px;
+}
+
+.tarjetas img{
+    width: 100%;
+    height: auto;
+}
+
+.tarjetas{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.tarjetas article{
+    width: 325px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+
+.tarjetas li{
+    list-style-type: none;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.tarjetas button{
+    padding: .5em 1em;
+    border-radius: .4em;
+    border: none;
+    background-color: red;
+    color: white;
+}
+
+.tarjetas button:active{
+    background-color: rgb(184, 2, 2);
+}
+
+/*la foto de santa cruz quedaba en distinta resolucion*/
+.santa-cruz img{
+    width: 380px;
 }

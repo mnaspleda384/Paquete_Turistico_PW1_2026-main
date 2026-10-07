@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
-        <input type="checkbox" id="tema">
-    <label for="tema">Tema oscuro</label>
-        <input type="checkbox" id="tema">
-    <label for="tema">Tema claro</label>
     <header>
+        <div class="tema">
+            <input type="radio" id="tema-oscuro" name="tema">
+            <label for="tema-oscuro">Tema oscuro</label>
+            <input type="radio" id="tema-claro" name="tema" checked>
+            <label for="tema-claro">Tema claro</label>
+        </div>
         <img src="./Imagenes/logo.png"
             alt="Luma - Viajes que empiezan antes de partir"
-            width="300">
+            width="300" class="logo">
             <img src="./Imagenes/logopj.png"
             alt="imagen descriptiva de usuario"
             width="150">
-            <p>@Javo_pelu_barraza</p>
+            <p>@Usuario_admin</p>
             <a href="miCuenta.html">Cambiar cuenta</a>
                     <nav>
             <a href="miCuenta.html">Mi cuenta</a>
-            <a href="carrito.html">Carrito</a>
             <a href="miAdmin.html">Cambiar a Administrador</a>
             <a href="inicio.html">Cerrar sesión</a>
         </nav>

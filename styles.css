@@ -479,6 +479,7 @@ background-color: #032533; /* El azul oscuro de tu paleta */
     margin-top: 1em;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
 }
 .admin-formulario h2, .admin-listado h2 {
     color: #032533;

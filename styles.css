@@ -2,60 +2,155 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 
 header{
+    display: flex;
+    justify-content: space-between;/*Mando el logo bien a la izq:)!!!!*/
+    align-items: center;
     background-color: #67b8d8;
     position: relative;
-    padding-bottom: 15px;
+    padding: 15px 30px ;
 }
 
 body{
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f7f6; 
+    color: #020202;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:2em 1em;
+    gap: 2em;
+    background-image: url('./Imagenes/fondoInicioPrincipal.jpg'); 
+    background-size:cover; 
+    background-position:center; 
+    
 }
 
 footer{
     background-color: rgb(88, 95, 102);
     width: 100%;
+    color: #FFFFFF;
+    padding: 30px 20px;
+    text-align: center;
     position: relative;
-    margin-top: 41px;
+    /*margin-top: 41px;*/
+    text-decoration: underline;
 }
 
 /* para acomodar el logo en todas las paginas*/
-.logo{
-    display: flex;
-    justify-content: start;
+/*.logo{
+Lo cambie ya que vi en la teoria que el display flex esta hecho para contenedores y no para img.
+}*/
+.boton_principal{
+    background-color: #032533;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
 }
+.boton_principal:hover{
+    background-color:#4586a0;
+}
+.boton_secundario{
+    background-color: #032533;
+    display: inline-block;
+    color: #fffefe;
+    text-decoration:none;/*NO se ve aaaaaaaaaa*/
+    padding: 10px 25px;
+    border: 2px solid #0000;
+    border-radius: 25px;
+    font-weight: bolder;
+}
+.boton_secundario:hover{
+    background-color: #4586a0;
+    color: #FFFFFF;
 
+}
+.parrafo-inicio{
+    background-color: rgba(0, 0, 0, 0.8) ;
+    color: #f0f0f0;
+    border-radius: 2px;
+    margin-bottom: 1.5em;
+    
+}
+.contacto{
+    list-style-type: none;
+    line-height: 2.0;
+    
+}
 /* lo mismo pero para el tema*/
 .tema{
-    display: flex;
-    justify-content: end;
+    font-size: 0.9em;
+    color:#032533 ;/*no contrasta taaanto*/
+    font-weight: bold;
 }
+
 
 .iniciar-sesion{
+    width: 100%;
+    max-width: 450px;
+    flex-direction: column;
     padding-bottom: 2em;
     margin-top: 3em;
+    text-align: center;
+    border-color: #020202;
+    padding: 40px 30px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
 }
-
+.contenedor-h1{
+background-color: #5c595962;
+border-radius: 15px;
+}
 .iniciar-sesion form{
     display: grid;
     grid-template-columns: 100px 1fr;
-    gap: 12px 2px;
+    gap: 15px ;
     max-width: 350px;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 20px;
+    text-align: left;
     align-items: center;
 }
-
-.iniciar-sesion button{
-    margin-left: 19em;
-    padding: 5px;
-    justify-self: center;             
-    width: auto;                     
-    padding-left: 20px;
-    padding-right: 20px; 
+.iniciar-sesion input{
+    padding: 8px 12px;
+    outline: none;
+    border: 1px solid #020202;
+    border-radius: 15px;
 }
+.iniciar-sesion input:focus{/*Lo saque de la ia pq no sabia como hacerlo*/
+    border-color: #67b8d8;
+}
+.primera-vez{
+    width: 100%;
+    max-width: 450px;
+    flex-direction: column;
+    padding-bottom: 2em;
+    margin-top: 3em;
+    text-align: center;
+    border-color: #020202;
+    padding: 40px 30px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    }
+
+.titulo-inicio{
+margin-bottom: 15px;
+text-align: center;
+background-color:#5c595962;
+border-radius: 10px;
+}
+
 
 /* acomoda los labels e inputs*/
 .crear-usuario form{

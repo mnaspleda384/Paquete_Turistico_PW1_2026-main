@@ -4,56 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>@Usuario_1 Perfil</title>
 </head>
 <body>
     <header>
+    <img src="./Imagenes/logo.png"
+        alt="Luma - Viajes que empiezan antes de partir"
+        width="300" class="logo">
+        <nav class="navegacion">
+            <a href="miCuenta.html">Mi cuenta</a>
+            <a href="miAdmin.html">Cambiar a Administrador</a>
+            <a href="inicio.html">Cerrar sesión</a>
+        </nav>
         <div class="tema">
             <input type="radio" id="tema-oscuro" name="tema">
             <label for="tema-oscuro">Tema oscuro</label>
             <input type="radio" id="tema-claro" name="tema" checked>
             <label for="tema-claro">Tema claro</label>
         </div>
-        <img src="./Imagenes/logo.png"
-            alt="Luma - Viajes que empiezan antes de partir"
-            width="300" class="logo">
+        <p>@Usuario_1</p>
             <img src="./Imagenes/logopj.png"
             alt="imagen descriptiva de usuario"
             width="150">
-            <p>@Usuario_1</p>
-            <a href="miAdmin.html">Cambiar cuenta</a>
-                    <nav class="navegacion">
-            <a href="miCuenta.html">Mi cuenta</a>
-            <a href="miAdmin.html">Cambiar a Administrador</a>
-            <a href="inicio.html">Cerrar sesión</a>
         </nav>
     </header>
     <main>
-        <section>
-            <article>
+        <section class="panel-cuenta">
+            <article class="tarjeta-datos">
                 <h2>Datos Personales.</h2>
-                <p>Nombre: Lionel Andres</p>
-                <p>Apellido: Messi </p>
-                <p>Email: lmessi264@unlam.alumno.edu.ar</p>
-                <br>
-                <button type="submit">Cambiar contraseña</button>
-            </article>
-            <article>
-                <h2>Favoritos</h2>
-                <div id="paquete_fav">
-                <img src="./Imagenes/Cataratas_del_Iguazú_en_Argentina.jpg" alt="Cataratas del Iguazú" width="300">
-                <h2>Cataratas del Iguazú</h2>
-                </div>
-                <br>
-                <div id="paquete_fav">
-                <img src="./Imagenes/cancun.jpg" alt="Playa en Cancún" width="300">
-                <h2>Cancún</h2>
-                </div>
-                <div id="paquete_fav">
-                    <img src="./Imagenes/mendoza.jpg" alt="Viñedos en Mendoza" width="300">
-                <h2>Mendoza</h2>
+                <div class="datos-lista">
+                <p><strong>Nombre: </strong> Lionel Andres</p>
+                <p><strong>Apellido: </strong> Messi </p>
+                <p> <strong>Email: </strong>lmessi264@unlam.alumno.edu.ar</p>
                 </div>
                 
+                <button type="submit" class="boton-principal-micuenta">Cambiar contraseña</button>
+            </article>
+
+            <article class="tarjeta-fav">
+                <h2>Mis Favoritos</h2>
+                <div class="grilla-fav">
+                    <div class="item-fav">
+                <img src="./Imagenes/Cataratas_del_Iguazú_en_Argentina.jpg" alt="Cataratas del Iguazú" width="300">
+                <h3>Cataratas del Iguazú</h3>
+                </div>
+                
+                <div class="grilla-fav">
+                    <div class="item-fav">
+                <img src="./Imagenes/cancun.jpg" alt="Playa en Cancún" width="300">
+                <h3>Cancún</h3>
+                </div>
+                <div class="grilla-fav">
+                    <div class="item-fav">
+                    <img src="./Imagenes/mendoza.jpg" alt="Viñedos en Mendoza" width="300">
+                <h3>Mendoza</h3>
+                </div>
+            </div>
             </article>
         </section>
     </main>

@@ -4,117 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>@Usuario_Administrador Perfil</title>
 </head>
 <body>
     <header>
+        <img src="./Imagenes/logo.png"
+        alt="Luma - Viajes que empiezan antes de partir"
+        width="300" class="logo">
+        <nav class="navegacion">
+            <a href="miCuenta.html">Mi cuenta</a>
+            <a href="usuario.html">Cambiar a Usuario</a>
+            <a href="inicio.html">Cerrar sesión</a>
+        </nav>
         <div class="tema">
             <input type="radio" id="tema-oscuro" name="tema">
             <label for="tema-oscuro">Tema oscuro</label>
             <input type="radio" id="tema-claro" name="tema" checked>
             <label for="tema-claro">Tema claro</label>
         </div>
-        <img src="./Imagenes/logo.png"
-            alt="Luma - Viajes que empiezan antes de partir"
-            width="300" class="logo">
+        <p>@Usuario_Administrador</p>
             <img src="./Imagenes/logopj.png"
             alt="imagen descriptiva de usuario"
             width="150">
-            <p>@Usuario_admin</p>
-            <a href="miCuenta.html">Cambiar cuenta</a>
-                    <nav class="navegacion">
-            <a href="miCuenta.html">Mi cuenta</a>
-            <a href="miAdmin.html">Cambiar a Administrador</a>
-            <a href="inicio.html">Cerrar sesión</a>
         </nav>
     </header>
     <main>
-    <section>
-        <h1>Agregar nuevo paquete</h1>
-        <form method="post">
-            <label for="Origen">Origen:</label>
-                <input type="text" id="origen" name="origen" required>
-            <br>
-            <label for="Destino">Destino:</label>
-                <input type="text" name="destino" id="destino" required>
-            <br>
-            <label for="Fecha_Inicio">Fecha de inicio:</label>
-                <input type="date" name="Fecha_Inicio" id="Fecha_Inicio" required>
-            <br>
-            <label for="Fecha_Fin">Fecha de fin:</label>
-                <input type="date" name="Fecha_Fin" id="Fecha_Fin" required>    
-            <br>
-            <label for="Cantidad">Cantidad de dias:</label> 
-                <input type="number" name="Cantidad" id="Cantidad" required>
-                <br>
-            <label for="Precio">Precio: </label>
-            <input type="number" name="precio" id="precio" required>
-            <br>
-            <textarea name="descripcion" id="descripcion">Descripcion</textarea>
-            <button type="button">Adjuntar Imagen</button><!--No lo ponemos como requerido ya que no le podemos dar funcionalidad-->
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+        <div class="panel-admin">
         <section>
-            <h1>Paquetes turísticos</h1>
+            <h2>Agregar nuevo paquete</h2>
+                <form method="post">
+            <div class="fila-form">
+                        <div class="grupo-form">
+                            <label for="origen">Origen:</label>
+                            <input type="text" id="origen" name="origen" required>
+                        </div>
+                        <div class="grupo-form">
+                            <label for="destino">Destino:</label>
+                            <input type="text" id="destino" name="destino" required>
+                        </div>
+                    </div>
 
-            <article>
-                <!--aca despues vemos bien que imagenes ponemos-->
-                <img src="./Imagenes/fotoCentroBariloche.jpg" alt="Lago y montañas en Bariloche" width="300">
-                <h2>Bariloche</h2>
-                <p>Siete días entre lagos y montañas, con excursión al Cerro Catedral.</p>
-                <ul>
-                    <li>Duración: 7 días</li>
-                    <li>Precio: $ 650.000</li>
-                </ul>
-            </article>
+                    <div class="fila-form">
+                        <div class="grupo-form">
+                            <label for="Fecha_Inicio">Fecha de inicio:</label>
+                            <input type="date" id="Fecha_Inicio" name="Fecha_Inicio" required>
+                        </div>
+                        <div class="grupo-form">
+                            <label for="Fecha_Fin">Fecha de fin:</label>
+                            <input type="date" id="Fecha_Fin" name="Fecha_Fin" required>
+                        </div>
+                    </div>
 
-            <article>
-                <!--aca tambien despues vemos bien que imagenes ponemos-->
-                <img src="./Imagenes/Cataratas_del_Iguazú_en_Argentina.jpg" alt="Cataratas del Iguazú" width="300">
-                <h2>Cataratas del Iguazú</h2>
-                <p>Cinco días recorriendo las cataratas desde ambos lados.</p>
-                <ul>
-                    <li>Duración: 5 días</li>
-                    <li>Precio: $ 480.000</li>
-                </ul>
-            </article>
+                    <div class="fila-form">
+                        <div class="grupo-form">
+                            <label for="Cantidad">Cantidad de días:</label>
+                            <input type="number" id="Cantidad" name="Cantidad" required>
+                        </div>
+                        <div class="grupo-form">
+                            <label for="precio">Precio ($):</label>
+                            <input type="number" id="precio" name="precio" required>
+                        </div>
+                    </div>
 
-            <article>
-                <!--vemos-->
-                <img src="./Imagenes/cancun.jpg" alt="Playa en Cancún" width="300">
-                <h2>Cancún</h2>
-                <p>Diez días all inclusive frente al mar Caribe.</p>
-                <ul>
-                    <li>Duración: 10 días</li>
-                    <li>Precio: $ 1.900.000</li>
-                </ul>
-            </article>
+                    <div class="grupo-form">
+                        <label for="descripcion">Descripción:</label>
+                        <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+                    </div>
 
-            <article>
-                <!--vemos-->
-                <img src="./Imagenes/mendoza.jpg" alt="Viñedos en Mendoza" width="300">
-                <h2>Mendoza</h2>
-                <p>Cuatro días de bodegas, degustaciones y cordillera.</p>
-                <ul>
-                    <li>Duración: 4 días</li>
-                    <li>Precio: $ 390.000</li>
-                </ul>
-            </article>
-            <article>
-                <!--vemos-->
-                <img src="./Imagenes/SantaCruz.jpg" alt="El calafate Santa Cruz" width="300">
-                <h2>Santa Cruz</h2>
-                <p>Cuatro días de bodegas, degustaciones y cordillera.</p>
-                <ul>
-                    <li>Duración: 14 días</li>
-                    <li>Precio: $2.000.000</li>
-                </ul>
+                    <div class="acciones-form">
+                        <button type="button" class="boton_secundario">Adjuntar Imagen</button>
+                        <button type="submit" class="boton_principal">Cargar Paquete</button>
+                    </div>
+                </form>
+            </section>
 
-            </article>
+            <section class="admin-listado">
+            <h2>Paquetes turísticos activos</h2>
 
-        </section>
+<div class="tarjetas">
+                    <article class="tarjeta-paquete">
+                        <img src="./Imagenes/fotoCentroBariloche.jpg" alt="Lago y montañas en Bariloche" class="img-paquete">
+                        <div class="contenido-paquete">
+                            <h2>Bariloche</h2>
+                            <p>Siete días entre lagos y montañas, con excursión al Cerro Catedral.</p>
+                            <ul>
+                                <li>Duración: 7 días</li>
+                                <li>Precio: $ 650.000</li>
+                            </ul>
+                        </div>
+                    </article>
 
+                    <!-- 2. Iguazú -->
+        <article class="tarjeta-paquete">
+                        <img src="./Imagenes/Cataratas_del_Iguazú_en_Argentina.jpg" alt="Cataratas del Iguazú" class="img-paquete">
+                        <div class="contenido-paquete">
+                            <h2>Cataratas del Iguazú</h2>
+                            <p>Cinco días recorriendo las cataratas desde ambos lados.</p>
+                            <ul>
+                                <li>Duración: 5 días</li>
+                                <li>Precio: $ 480.000</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <!-- 3. Cancún -->
+        <article class="tarjeta-paquete">
+                        <img src="./Imagenes/cancun.jpg" alt="Playa en Cancún" class="img-paquete">
+                        <div class="contenido-paquete">
+                            <h2>Cancún</h2>
+                            <p>Diez días all inclusive frente al mar Caribe.</p>
+                            <ul>
+                                <li>Duración: 10 días</li>
+                                <li>Precio: $ 1.900.000</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+
+        <article class="tarjeta-paquete">
+                        <img src="./Imagenes/mendoza.jpg" alt="Viñedos en Mendoza" class="img-paquete">
+                        <div class="contenido-paquete">
+                            <h2>Mendoza</h2>
+                            <p>Cuatro días de bodegas, degustaciones y cordillera.</p>
+                            <ul>
+                                <li>Duración: 4 días</li>
+                                <li>Precio: $ 390.000</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                
+        <article class="tarjeta-paquete">
+                        <img src="./Imagenes/SantaCruz.jpg" alt="El calafate Santa Cruz" class="img-paquete">
+                        <div class="contenido-paquete">
+                            <h2>Santa Cruz</h2>
+                            <p>Cuatro días de bodegas, degustaciones y cordillera.</p>
+                            <ul>
+                                <li>Duración: 14 días</li>
+                                <li>Precio: $ 2.000.000</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+        </div>
     </main>
 </body>
 </html>

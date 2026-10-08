@@ -343,5 +343,147 @@ padding: 10px 20px;
     color: #555;
     line-height: 1.6;
 }
+/*MI CUENTA*/
+.panel-cuenta {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 90em; 
+    margin: 2 auto;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 30px;
+    border-radius: 67px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+}
+@media (min-width: 768px) {
+    .panel-cuenta {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .tarjeta-datos {
+        flex: 1; 
+    }
+    .tarjeta-fav {
+        flex: 2; 
+    }
 }
 
+    .tarjeta-datos, .tarjeta-favoritos {
+    background-color: #f4f7f6;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #d1d9d6;
+}
+
+.tarjeta-datos h2, .tarjeta-favoritos h2 {
+    color: #032533;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #67b8d8;/*es la linea de abajo de datos personales, la uso para separar la jerarquia del titulo con los datos*/
+    padding-bottom: 10px;
+}
+.datos-lista p {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.1em;
+}
+.grilla-fav {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));/*autofit lo investigue con ia pq sino quedaba mal*/
+    gap: 20px;
+}
+.item-fav {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+.item-fav img {
+    width: 100%;
+    height: 120px; 
+    object-fit: cover;/*Si no lo uso se me distorsiona la imagen*/
+}
+
+.item-fav h3 {
+    font-size: 1.5em;
+    color: #032533;
+    padding: 15px 10px;
+}
+.boton-principal-micuenta{
+background-color: #032533; /* El azul oscuro de tu paleta */
+    color: #ffffff;
+    padding: 12px 24px; /* 12px de alto y 24px a los lados para un aspecto más rectangular y equilibrado */
+    border: none; /* Quitamos el borde genérico del navegador */
+    border-radius: 8px; /* Bordes redondeados modernos, pero no circulares */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+/*Mi admin*/
+.panel-admin {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.fila-form {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    margin-top: 1em;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.admin-formulario h2, .admin-listado h2 {
+    color: #032533;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #67b8d8;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.grupo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+@media (min-width: 768px) {
+    .fila-form {
+        flex-direction: row;
+    }
+    .fila-form .grupo-form {
+        flex: 1; /* Hace que ambos campos midan lo mismo */
+    }
+    .acciones-form {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+}
+.tarjeta-registro {
+    max-width: 600px; /* Más ancha que la del login normal */
+}
+.cabecera-registro {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+.acciones-registro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+.link-sutil {
+    color: #67b8d8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+}

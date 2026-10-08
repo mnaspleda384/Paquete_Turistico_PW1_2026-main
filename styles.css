@@ -12,11 +12,9 @@ header{
     background-color: #67b8d8;
     position: relative;
     padding: 15px 30px ;
-    flex-wrap: wrap; /* Permite que los elementos bajen ordenados si la pantalla se chica */
+    flex-wrap: wrap; /* Permite que los elementos bajen ordenados si la pantalla se achica */
     gap: 15px; /*permite que los elementos separen bien */
 }
-
-
 
 
 body{
@@ -26,6 +24,7 @@ body{
     background-color: #f4f7f6; 
     color: #020202;
 }
+
 main{
     display: flex;
     flex-direction: column;
@@ -45,7 +44,6 @@ footer{
     padding: 30px 20px;
     text-align: center;
     position: relative;
-    /*margin-top: 41px;*/
     text-decoration: underline;
 }
 
@@ -59,10 +57,7 @@ header *{
     flex-shrink: 1; /*Permite achicar la capacidad del header si no todo entra*/
 }
 
-/* para acomodar el logo en todas las paginas*/
-/*.logo{
-Lo cambie ya que vi en la teoria que el display flex esta hecho para contenedores y no para img.
-}*/
+
 .boton_principal{
     background-color: #032533;
     color: white;
@@ -73,14 +68,16 @@ Lo cambie ya que vi en la teoria que el display flex esta hecho para contenedore
     font-weight: bold;
     margin-top: 10px;
 }
+
 .boton_principal:hover{
     background-color:#4586a0;
 }
+
 .boton_secundario{
     background-color: #032533;
     display: inline-block;
     color: #fffefe;
-    text-decoration:none;/*NO se ve aaaaaaaaaa*/
+    text-decoration:none;
     padding: 10px 25px;
     border: 2px solid #0000;
     border-radius: 25px;
@@ -91,22 +88,24 @@ Lo cambie ya que vi en la teoria que el display flex esta hecho para contenedore
     color: #FFFFFF;
 
 }
+
 .parrafo-inicio{
-    background-color: rgba(0, 0, 0, 0.8) ;
+    background-color: rgba(0, 0, 0, 0.8);
     color: #f0f0f0;
     border-radius: 2px;
     margin-bottom: 1.5em;
     
 }
+
 .contacto{
     list-style-type: none;
     line-height: 2.0;
     
 }
-/* lo mismo pero para el tema*/
+
 .tema{
     font-size: 0.9em;
-    color:#032533 ;/*no contrasta taaanto*/
+    color:#032533;
     font-weight: bold;
 }
 
@@ -123,10 +122,12 @@ Lo cambie ya que vi en la teoria que el display flex esta hecho para contenedore
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
     border-radius: 10px;
 }
+
 .contenedor-h1{
 background-color: #5c595962;
 border-radius: 15px;
 }
+
 .iniciar-sesion form{
     display: grid;
     grid-template-columns: 100px 1fr;
@@ -137,15 +138,18 @@ border-radius: 15px;
     text-align: left;
     align-items: center;
 }
+
 .iniciar-sesion input{
     padding: 8px 12px;
     outline: none;
     border: 1px solid #020202;
     border-radius: 15px;
 }
-.iniciar-sesion input:focus{/*Lo saque de la ia pq no sabia como hacerlo*/
+
+.iniciar-sesion input:focus{
     border-color: #67b8d8;
 }
+
 .primera-vez{
     width: 100%;
     max-width: 450px;
@@ -157,7 +161,7 @@ border-radius: 15px;
     padding: 40px 30px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
     border-radius: 10px;
-    }
+}
 
 .titulo-inicio{
 margin-bottom: 15px;
@@ -166,8 +170,6 @@ background-color:#5c595962;
 border-radius: 10px;
 }
 
-
-/* acomoda los labels e inputs*/
 .crear-usuario form{
     display: grid;
     grid-template-columns: 100px 1fr;
@@ -178,7 +180,6 @@ border-radius: 10px;
     align-items: center;
 }
 
-/* acomoda el boton de enviar*/
 .crear-usuario button{
     margin-left: 19em;
     padding: 5px;
@@ -188,11 +189,11 @@ border-radius: 10px;
     padding-right: 30px; 
 }
 
-/* desaparece los puntos del list*/
 .contacto{
     list-style-type: none;
 }
-/*pag usario*/
+
+/*pag usuario*/
 .controles-vista{
     display: flex;
     align-self: flex-end; 
@@ -207,7 +208,7 @@ border-radius: 10px;
 
 .navegacion a{
     text-decoration: none;
-    padding: 10px 15px; /* Redujo el paddin para que entre todo dentro*/
+    padding: 10px 15px; /* Redujo el padding para que entre todo dentro*/
     text-align: center;
     color: rgb(16, 68, 48);
     font-size: 15px;
@@ -228,16 +229,12 @@ border-radius: 10px;
     font-weight: bold;
     color: rgb(16, 68, 48);
     font-size: 14px;
-    white-space: nowrap; /* Evita que el nombre del usuario se rompa en varias líneas */
     gap: 5px; /* Espacio entre el nombre y la imagen */
 }
 
 .img-usuario {
     /*Para tener un mejor control del img cuenta*/
     width: 50px;       /* Tamaño chico y controlado para el header */
-    height: 50px;      /* Para que sea un cuadrado perfecto */
-    border-radius: 50%; /* que la foto de perfil sea redonda Se puede sacar cualquier cosa*/
-    object-fit: cover;
 }
 
 .navegacion a:hover{
@@ -308,6 +305,7 @@ border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.2); 
     padding: 30px;
 }
+
 @media (min-width: 850px) {
     .layout-paquete {
         flex-direction: row;
@@ -319,7 +317,7 @@ border-radius: 10px;
     min-width: 0; /* evita que el contenido empuje el ancho de la pantalla */
 }
 .paquete-precio {
-    flex: 1; /* Ocupa 1 parte del espacio */
+    flex: 1;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -338,7 +336,7 @@ border-radius: 10px;
 .paquete-info h2 {
     color: #033141;
     margin: 30px 0 15px 0;
-    border-bottom: 2px solid #67b8d8;/*lo descubri con ia :)*/
+    border-bottom: 2px solid #67b8d8;
     padding-bottom: 5px;
 }
 .lista-detalles {
@@ -459,15 +457,20 @@ border-radius: 10px;
     padding: 15px 10px;
 }
 .boton-principal-micuenta{
-    background-color: #032533; /* El azul oscuro de tu paleta */
+    background-color: #032533;
     color: #ffffff;
-    padding: 12px 24px; /* 12px de alto y 24px a los lados para un aspecto más rectangular y equilibrado */
-    border: none; /* Quitamos el borde genérico del navegador */
-    border-radius: 8px; /* Bordes redondeados modernos, pero no circulares */
+    padding: 12px 24px; 
+    border: none; 
+    border-radius: 8px;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
     display: inline-block;
+}
+
+.boton-principal-micuenta:hover{
+    background-color:#4586a0;
+    color: #FFFFFF;
 }
 /*Mi admin*/
 .panel-admin {
@@ -505,7 +508,7 @@ border-radius: 10px;
         flex-direction: row;
     }
     .fila-form .grupo-form {
-        flex: 1; /* Hace que ambos campos midan lo mismo */
+        flex: 1;
     }
 }
 .acciones-form {
@@ -518,7 +521,7 @@ border-radius: 10px;
     padding-top: 20px;
 }
 .tarjeta-registro {
-    max-width: 600px; /* Más ancha que la del login normal */
+    max-width: 600px;
 }
 .cabecera-registro {
     margin-bottom: 25px;
@@ -539,15 +542,11 @@ border-radius: 10px;
     transition: color 0.3s;
 }
 
-/* ================= RESPONSIVE ================= */
-
-/* Imágenes y logo nunca más anchos que su contenedor */
 header .logo{
     max-width: 100%;
     height: auto;
 }
 
-/* Tablets y celulares */
 @media (max-width: 768px) {
     header{
         justify-content: center;
@@ -569,7 +568,6 @@ header .logo{
     }
 }
 
-/* Celulares */
 @media (max-width: 600px) {
     header .logo{
         width: 200px;
@@ -579,7 +577,7 @@ header .logo{
         font-size: 14px;
     }
 
-    /* Tarjetas de paquetes: ocupan todo el ancho disponible */
+    
     .tarjetas{
         gap: 0.5em;
     }
@@ -592,7 +590,7 @@ header .logo{
         width: 100%;
     }
 
-    /* Login / primera vez / registro */
+    
     .iniciar-sesion,
     .primera-vez{
         padding: 25px 15px;
@@ -609,7 +607,7 @@ header .logo{
         width: 100%;
     }
 
-    /* Detalle de paquete */
+    
     .diseño-paq{
         padding: 15px;
         gap: 15px;
@@ -628,7 +626,7 @@ header .logo{
         max-width: 320px;
     }
 
-    /* Mi cuenta */
+    
     .panel-cuenta{
         padding: 15px;
         border-radius: 25px;
@@ -638,7 +636,6 @@ header .logo{
         padding: 15px;
     }
 
-    /* Mi admin */
     .fila-form{
         padding: 15px;
     }

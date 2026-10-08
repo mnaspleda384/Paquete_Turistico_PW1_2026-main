@@ -313,17 +313,20 @@ border-radius: 10px;
         flex-direction: row;
         align-items: flex-start;
     }
+}
 .paquete-info {
-        flex: 2; 
-    }
+    flex: 2; 
+    min-width: 0; /* evita que el contenido empuje el ancho de la pantalla */
+}
 .paquete-precio {
-        flex: 1; /* Ocupa 1 parte del espacio */
-        margin-top: 20px;
-        margin-bottom: 20px;
-
-    }
-    .img-detalle {
+    flex: 1; /* Ocupa 1 parte del espacio */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.img-detalle {
     width: 100%;
+    height: auto;
+    max-width: 100%;
     max-height: 400px;
     margin-bottom: 25px;
 }
@@ -351,12 +354,14 @@ border-radius: 10px;
 .caja-valores p {
     display: flex;
     justify-content: space-between;/*lo tiro bien para cada lado*/
+    gap: 10px;
     margin-bottom: 15px;
     font-size: 1.1em;
     color: #0e0d0d;
 }
 .boton-principal {
     width: 25%;
+    min-width: 140px;
     background-color:#0be239;
     font-size: 1.2em;
     padding: 15px;
@@ -368,12 +373,11 @@ border-radius: 10px;
     color: #FFFFFF;
 }
 .metodos-pago{
-box-shadow: #020202;
-background-color: #FFFFFF;
-border-color: #033141;
-border-radius: 12px;
-padding: 10px 20px;
-
+    box-shadow: #020202;
+    background-color: #FFFFFF;
+    border-color: #033141;
+    border-radius: 12px;
+    padding: 10px 20px;
 }
 .metodos-pago h3 {
     font-size: 1em;
@@ -413,7 +417,7 @@ padding: 10px 20px;
     }
 }
 
-    .tarjeta-datos, .tarjeta-favoritos {
+.tarjeta-datos, .tarjeta-favoritos {
     background-color: #f4f7f6;
     padding: 25px;
     border-radius: 10px;
@@ -430,6 +434,7 @@ padding: 10px 20px;
     margin-bottom: 15px;
     color: #333;
     font-size: 1.1em;
+    overflow-wrap: anywhere; /* para que el email largo no se salga de la caja */
 }
 .grilla-fav {
     display: grid;
@@ -454,7 +459,7 @@ padding: 10px 20px;
     padding: 15px 10px;
 }
 .boton-principal-micuenta{
-background-color: #032533; /* El azul oscuro de tu paleta */
+    background-color: #032533; /* El azul oscuro de tu paleta */
     color: #ffffff;
     padding: 12px 24px; /* 12px de alto y 24px a los lados para un aspecto más rectangular y equilibrado */
     border: none; /* Quitamos el borde genérico del navegador */
@@ -479,6 +484,7 @@ background-color: #032533; /* El azul oscuro de tu paleta */
     margin-top: 1em;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
 }
 .admin-formulario h2, .admin-listado h2 {
     color: #032533;
@@ -492,6 +498,7 @@ background-color: #032533; /* El azul oscuro de tu paleta */
     flex-direction: column;
     gap: 8px;
     text-align: left;
+    min-width: 0;
 }
 @media (min-width: 768px) {
     .fila-form {
@@ -500,14 +507,15 @@ background-color: #032533; /* El azul oscuro de tu paleta */
     .fila-form .grupo-form {
         flex: 1; /* Hace que ambos campos midan lo mismo */
     }
-    .acciones-form {
+}
+.acciones-form {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     gap: 15px;
     margin-top: 10px;
     border-top: 1px solid #eee;
     padding-top: 20px;
-}
 }
 .tarjeta-registro {
     max-width: 600px; /* Más ancha que la del login normal */
@@ -530,4 +538,111 @@ background-color: #032533; /* El azul oscuro de tu paleta */
     font-size: 0.9em;
     transition: color 0.3s;
 }
+
+/* ================= RESPONSIVE ================= */
+
+/* Imágenes y logo nunca más anchos que su contenedor */
+header .logo{
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tablets y celulares */
+@media (max-width: 768px) {
+    header{
+        justify-content: center;
+        text-align: center;
+        padding: 15px;
+    }
+    .navegacion{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    main{
+        padding: 1.5em 0.75em;
+    }
+    .controles-vista{
+        align-self: center;
+    }
+    .tarjetas article{
+        margin: 10px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    header .logo{
+        width: 200px;
+    }
+    .navegacion a{
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    /* Tarjetas de paquetes: ocupan todo el ancho disponible */
+    .tarjetas{
+        gap: 0.5em;
+    }
+    .tarjetas article{
+        width: 100%;
+        max-width: 325px;
+        margin: 10px 0;
+    }
+    .santa-cruz img{
+        width: 100%;
+    }
+
+    /* Login / primera vez / registro */
+    .iniciar-sesion,
+    .primera-vez{
+        padding: 25px 15px;
+        margin-top: 1em;
+    }
+    .iniciar-sesion form{
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    .iniciar-sesion .boton_principal{
+        width: 100%;
+    }
+    .tarjeta-registro{
+        width: 100%;
+    }
+
+    /* Detalle de paquete */
+    .diseño-paq{
+        padding: 15px;
+        gap: 15px;
+    }
+    .titulo-paq{
+        font-size: 1.5em;
+    }
+    .paquete-precio{
+        padding: 15px;
+    }
+    .caja-valores p{
+        flex-wrap: wrap;
+    }
+    .boton-principal{
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* Mi cuenta */
+    .panel-cuenta{
+        padding: 15px;
+        border-radius: 25px;
+    }
+    .tarjeta-datos,
+    .tarjeta-favoritos{
+        padding: 15px;
+    }
+
+    /* Mi admin */
+    .fila-form{
+        padding: 15px;
+    }
+    .acciones-form{
+        justify-content: center;
+    }
 }

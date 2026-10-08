@@ -12,7 +12,12 @@ header{
     background-color: #67b8d8;
     position: relative;
     padding: 15px 30px ;
+    flex-wrap: wrap; /* Permite que los elementos bajen ordenados si la pantalla se chica */
+    gap: 15px; /*permite que los elementos separen bien */
 }
+
+
+
 
 body{
     display: flex;
@@ -42,6 +47,16 @@ footer{
     position: relative;
     /*margin-top: 41px;*/
     text-decoration: underline;
+}
+
+header .logo{
+    /* Hacemos que el logo no sea tan gigante y siga a la izq ;) */
+    width: 250px;
+    max-height: 100%;
+}
+
+header *{
+    flex-shrink: 1; /*Permite achicar la capacidad del header si no todo entra*/
 }
 
 /* para acomodar el logo en todas las paginas*/
@@ -192,11 +207,37 @@ border-radius: 10px;
 
 .navegacion a{
     text-decoration: none;
-    padding: 15px;
+    padding: 10px 15px; /* Redujo el paddin para que entre todo dentro*/
     text-align: center;
     color: rgb(16, 68, 48);
     font-size: 15px;
     font-weight: bold;
+    
+}
+
+.usuario-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+    /*Con esto se puede ajustar la posición del nombre y la imagen del usuario en el header*/
+}
+
+.usuario-header p {
+    /*Nos permite manipular el parrafo del usuario*/
+    font-weight: bold;
+    color: rgb(16, 68, 48);
+    font-size: 14px;
+    white-space: nowrap; /* Evita que el nombre del usuario se rompa en varias líneas */
+    gap: 5px; /* Espacio entre el nombre y la imagen */
+}
+
+.img-usuario {
+    /*Para tener un mejor control del img cuenta*/
+    width: 50px;       /* Tamaño chico y controlado para el header */
+    height: 50px;      /* Para que sea un cuadrado perfecto */
+    border-radius: 50%; /* que la foto de perfil sea redonda Se puede sacar cualquier cosa*/
+    object-fit: cover;
 }
 
 .navegacion a:hover{
@@ -204,7 +245,10 @@ border-radius: 10px;
 }
 
 .navegacion{
-    margin-top: 15px;
+    display: flex; /*Agregamos display*/
+    margin-top: 0;/*Para que alinee al centro*/
+    gap: 5px;  /*podemos controlar el espacio en el nav para poder manipularlo mejor*/
+    
 }
 
 .tarjetas img{

@@ -9,38 +9,39 @@
 </head>
 <body>
     <header>
-        <div class="tema">
+        <img src="./Imagenes/logo.png"
+            alt="Luma - Viajes que empiezan antes de partir"
+            width="300" class="logo">
+            
+            <nav class="navegacion">
+                <a href="miCuenta.html">Mi cuenta</a>
+                <!--<a href="carrito.html">Carrito</a> No lo pusimos pq no entendimos ya que tenemos favoritos-->
+                <a href="miAdmin.html">Cambiar a Administrador</a>
+                <a href="inicio.html">Cerrar sesión</a>
+            </nav>
+            
+            <div class="tema">
             <input type="radio" id="tema-oscuro" name="tema">
             <label for="tema-oscuro">Tema oscuro</label>
             <input type="radio" id="tema-claro" name="tema" checked>
             <label for="tema-claro">Tema claro</label>
         </div>
-
-        <img src="./Imagenes/logo.png"
-            alt="Luma - Viajes que empiezan antes de partir"
-            width="300" class="logo">
-
-        <nav class="navegacion">
-            <a href="miCuenta.html">Mi cuenta</a>
-            <!--<a href="carrito.html">Carrito</a>-->
-            <a href="miAdmin.html">Cambiar a Administrador</a>
-            <a href="inicio.html">Cerrar sesión</a>
-        </nav>
     </header>
 
     <main>
-        <h1>Paquetes turísticos</h1>
-
+        <h1 class="titulo-inicio">Paquetes turísticos</h1>
+        <div class="controles-vista">
         <input type="radio" name="vista" id="vista-tarjetas" checked>
         <label for="vista-tarjetas">Tarjetas</label>
         <input type="radio" name="vista" id="vista-lista">
         <label for="vista-lista">Lista</label>
-
+        </div>
         <section class="tarjetas">
 
             <article class="bariloche">
-                <!--aca despues vemos bien que imagenes ponemos-->
+                <a href="PaqueteBariloche.html">
                 <img src="./Imagenes/fotoCentroBariloche.jpg" alt="Lago y montañas en Bariloche" width="300">
+                </a>
                 <h2>Bariloche</h2>
                 <p>Siete días entre lagos y montañas, con excursión al Cerro Catedral.</p>
                 <ul>
@@ -53,8 +54,9 @@
             </article>
 
             <article class="iguazu">
-                <!--aca tambien despues vemos bien que imagenes ponemos-->
+                <a href="PaqueteIguazu.html">
                 <img src="./Imagenes/Cataratas_del_Iguazú_en_Argentina.jpg" alt="Cataratas del Iguazú" width="300">
+                </a>
                 <h2>Cataratas del Iguazú</h2>
                 <p>Cinco días recorriendo las cataratas desde ambos lados.</p>
                 <ul>
@@ -67,8 +69,9 @@
             </article>
 
             <article class="cancun">
-                <!--vemos-->
+                <a href="PaqueteCancun.html">
                 <img src="./Imagenes/cancun.jpg" alt="Playa en Cancún" width="300">
+                </a>
                 <h2>Cancún</h2>
                 <p>Diez días all inclusive en las playas frente al mar Caribe.</p>
                 <ul>
@@ -81,8 +84,9 @@
             </article>
 
             <article class="mendoza">
-                <!--vemos-->
+                <a href="PaqueteMendoza.html">
                 <img src="./Imagenes/mendoza.jpg" alt="Viñedos en Mendoza" width="300">
+                </a>
                 <h2>Mendoza</h2>
                 <p>Cuatro días de bodegas, degustaciones y cordillera.</p>
                 <ul>
@@ -114,9 +118,8 @@
 
     <footer>
     <h2>Contacto</h2>
-    <ul>
+    <ul class="contacto">
         <li>Email: <a href="mailto:contacto@luma.com">contacto@luma.com</a></li>
-        <li>Teléfono: <a href="tel:+541112345678">+54 11 1234-5678</a></li>
         <li>WhatsApp: <a href="https://wa.me/541112345678">+54 11 1234-5678</a></li>
         <li>Dirección: Av. Corrientes 1234, CABA</li>
         <li>Horario: Lunes a Viernes de 9 a 18 h</li>

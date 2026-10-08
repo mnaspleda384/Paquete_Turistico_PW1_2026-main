@@ -177,6 +177,18 @@ border-radius: 10px;
 .contacto{
     list-style-type: none;
 }
+/*pag usario*/
+.controles-vista{
+    display: flex;
+    align-self: flex-end; 
+    gap: 15px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.3); 
+    padding: 5px 25px;
+    border-radius: 2px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+}
+
 
 .navegacion a{
     text-decoration: none;
@@ -203,8 +215,11 @@ border-radius: 10px;
 .tarjetas{
     display: flex;
     justify-content: center;
+    gap: 1.5em;
     flex-wrap: wrap;
     margin-top: 10px;
+    width: 100%;/*agregue estos 2 para que sea responsive*/
+    max-width: 1200px;
 }
 
 .tarjetas article{
@@ -238,3 +253,95 @@ border-radius: 10px;
 .santa-cruz img{
     width: 380px;
 }
+/*Paquetes*/
+.diseño-paq{
+    display: flex;
+    flex-direction: column; 
+    gap: 30px;
+    width: 100%;
+    max-width: 1100px; 
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.2); 
+    padding: 30px;
+}
+@media (min-width: 850px) {
+    .layout-paquete {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+.paquete-info {
+        flex: 2; 
+    }
+.paquete-precio {
+        flex: 1; /* Ocupa 1 parte del espacio */
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+    }
+    .img-detalle {
+    width: 100%;
+    max-height: 400px;
+    margin-bottom: 25px;
+}
+.titulo-paq {
+    color: #0a3a4d;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+.paquete-info h2 {
+    color: #033141;
+    margin: 30px 0 15px 0;
+    border-bottom: 2px solid #67b8d8;/*lo descubri con ia :)*/
+    padding-bottom: 5px;
+}
+.lista-detalles {
+    list-style: none;
+    line-height: 1.6;
+}
+.paquete-precio {
+    background-color: #f4f7f6;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #d1d9d6;
+}
+.caja-valores p {
+    display: flex;
+    justify-content: space-between;/*lo tiro bien para cada lado*/
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #0e0d0d;
+}
+.boton-principal {
+    width: 25%;
+    background-color:#0be239;
+    font-size: 1.2em;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+.boton-principal:hover{
+    background-color: rgb(58, 54, 54);
+    color: #FFFFFF;
+}
+.metodos-pago{
+box-shadow: #020202;
+background-color: #FFFFFF;
+border-color: #033141;
+border-radius: 12px;
+padding: 10px 20px;
+
+}
+.metodos-pago h3 {
+    font-size: 1em;
+    color: #f5f0f0;
+    background-color: #3b5f8f;
+    margin-bottom: 10px;
+}
+.metodos-pago ul {
+    list-style: none;
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.6;
+}
+}
+

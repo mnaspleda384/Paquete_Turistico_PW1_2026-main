@@ -14,11 +14,16 @@
             alt="Luma - Viajes que empiezan antes de partir"
             width="350" class="logo">
 
-        <div class="tema">
+<div class="tema">
             <input type="radio" id="tema-oscuro" name="tema">
-            <label for="tema-oscuro">Tema oscuro</label>
+            <label for="tema-oscuro">
+                <img src="./Imagenes/luna.svg" alt="Tema oscuro" width="24" style="cursor: pointer;">
+            </label>
+            
             <input type="radio" id="tema-claro" name="tema" checked>
-            <label for="tema-claro">Tema claro</label>
+            <label for="tema-claro">
+                <img src="./Imagenes/sol.svg" alt="Tema claro" width="24" style="cursor: pointer;">
+            </label>
         </div>
 
 
@@ -26,21 +31,24 @@
 
     <main>
         
-        <section class="iniciar-sesion">
+<section class="iniciar-sesion">
             <div class="contenedor-h1">
-            <h1>Iniciar sesión</h1>
+                <h1>Iniciar sesión</h1>
             </div>
-            <form method="post" action="usuario.html">
-
-                <label for="usuario">Usuario:</label>
-                <input type="text" id="usuario" name="username" required>
             
-                <label for="contrasena">Contraseña:</label>
-                <input type="password" id="contrasena" name="password" required>
+            <form class="login-container" method="post" action="usuario.html">
+                <div>
+                    <label class="login-label" for="usuario">Usuario:</label>
+                    <input class="login-input" type="text" id="usuario" name="username" placeholder="Ingresa tu usuario" required>
+                </div>
+            
+                <div>
+                    <label class="login-label" for="contrasena">Contraseña:</label>
+                    <input class="login-input" type="password" id="contrasena" name="password" placeholder="••••••••" required>
+                </div>
                 
-                <button type="submit" class="boton_principal">Ingresar</button> 
+                <button type="submit" class="login-btn">Ingresar</button> 
             </form>
-        
         </section>
         <section class="primera-vez">
             

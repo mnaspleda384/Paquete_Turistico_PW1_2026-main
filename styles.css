@@ -244,7 +244,7 @@ border-color: #888;
     display: inline-block;
     padding: 10px 20px;
     background-color: #0653ee;
-    color: #333;
+    color: #ffffff;
     text-decoration: none; 
     font-weight: 500;
     border: 1px solid #0453f1;
@@ -729,4 +729,29 @@ header .logo{
     .acciones-form{
         justify-content: center;
     }
+}
+
+/*-----------------------------------------------------*/
+
+.oscuro{
+    background-color: #000;
+    color: white;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lista article {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #FFFFFF;
+}
+
+.lista article img {
+    width: 120px;
+    height: 100px;
 }

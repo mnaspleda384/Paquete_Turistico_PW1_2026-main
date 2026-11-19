@@ -795,7 +795,7 @@ footer ul.contacto a:hover {
     background-color: #4586a0;
 }
 
-/agregado de carrito/
+/*agregado de carrito*/
 .herramientas-header {
     display: flex;
     align-items: center;
@@ -844,7 +844,7 @@ footer ul.contacto a:hover {
     }
 }
 
-/modo oscuro/
+/*modo oscuro*/
 body.oscuro {
     background-color: #0b151c;
     color: #e6eef2;
@@ -995,7 +995,7 @@ body.oscuro .link-sutil {
     color: #8fd3ec;
 }
 
-/carrusel estilos/
+/*carrusel estilos*/
 .carrusel {
     width: 100%;
     max-width: 860px;
@@ -2023,7 +2023,7 @@ body.oscuro .tarjetas article h3 {
     background-color: #4586a0;
 }
 
-/carrito en el header/
+/*carrito en el header*/
 .herramientas-header {
     display: flex;
     align-items: center;
@@ -2068,12 +2068,12 @@ body.oscuro .tarjetas article h3 {
 }
 
 @keyframes rebote {
-    50% {/es lo del carrito/
+    50% {/*es lo del carrito*/
         transform: scale(1.35);
     }
 }
 
-/interfaz carrito/
+/*interfaz carrito*/
 .lista-carrito {
     display: flex;
     flex-direction: column;
@@ -2416,7 +2416,7 @@ body.oscuro .admin-listado h2 {
     display: none;
 }
 
-/responsive para celu/
+/*responsive para celu*/
 .carrusel-tarjeta {
     flex: 0 0 calc((100% - 18px) / 1.25);
     scroll-snap-align: start;

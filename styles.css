@@ -1,68 +1,118 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
     box-sizing: border-box;
 }
-/*Posicionamiento del logo*/
-header{
-    display: flex;
-    justify-content: space-between;/*Mando el logo bien a la izq:)!!!!*/
-    align-items: center;
-    background-color: #67b8d8;
-    position: relative;
-    padding: 15px 30px ;
-    flex-wrap: wrap; /* Permite que los elementos bajen ordenados si la pantalla se achica */
-    gap: 15px; /*permite que los elementos separen bien */
-}
 
-header .logo{
-    /* Hacemos que el logo no sea tan gigante y siga a la izq ;) */
-    width: 250px;
-    max-height: 100%;
-}
-
-header *{
-    flex-shrink: 1; /*Permite achicar la capacidad del header si no todo entra*/
-}
-
-body{
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f4f7f6; 
+    background-color: #d8ecf3;
     color: #020202;
 }
 
-main{
+/* Header idéntico al original */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #67b8d8;
+    position: relative;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header .logo {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+}
+
+header * {
+    flex-shrink: 1;
+}
+
+.tema {
+    font-size: 0.9em;
+    color: #032533;
+    font-weight: bold;
+}
+
+.tema img {
+    cursor: pointer;
+}
+
+.navegacion {
+    display: flex;
+    margin-top: 0;
+    gap: 5px;
+}
+
+.navegacion a {
+    text-decoration: none;
+    padding: 10px 15px;
+    text-align: center;
+    color: rgb(16, 68, 48);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.navegacion a:hover {
+    background-color: #4586a0;
+}
+
+.usuario-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.usuario-header p {
+    font-weight: bold;
+    color: rgb(16, 68, 48);
+    font-size: 14px;
+    gap: 5px;
+}
+
+.img-usuario {
+    width: 50px;
+}
+
+/* Main con fondo en la paleta celeste/azul petróleo del sitio (no blanco) y foto nítida */
+main {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding:2em 1em;
+    padding: 2.5em 1.5em;
     gap: 2em;
-    background-image: url('./Imagenes/fondoInicioPrincipal.jpg'); 
-    background-size:cover; 
-    background-position:center; 
-    
+    background-color: #bfe0ed;
+    background-image: linear-gradient(rgba(103, 184, 216, 0.28), rgba(3, 37, 51, 0.25)), url('./Imagenes/fondoInicioPrincipal.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-/*Pie de página (es igual en todas las paginas del sitio)*/
-footer{
-    background-color: #f3f4f6; 
-    border-top: 1px solid #e5e7eb;
-    margin-top: 50px;
-    padding: 20px 20px;
+/* Footer */
+footer {
+    background-color: #e4f1f6;
+    border-top: 2px solid #67b8d8;
+    margin-top: auto;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    color: #4b5563;
+    color: #032533;
 }
 
 footer h2 {
     font-size: 18px;
     font-weight: 600;
-    color: #1f2937;
+    color: #032533;
     margin-bottom: 15px;
 }
 
@@ -71,131 +121,122 @@ footer ul.contacto {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap; /* Se acomoda bien si la pantalla es chica */
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Espacio entre cada dato de contacto */
+    gap: 20px;
     font-size: 14px;
+    line-height: 2.0;
 }
+
 footer ul.contacto a {
-    color: #3b82f6; /* Color azul para que combine con tus botones */
+    color: #0a3a4d;
+    font-weight: bold;
     text-decoration: none;
     transition: color 0.2s ease;
 }
+
 footer ul.contacto a:hover {
     text-decoration: underline;
-    color: #2563eb;
+    color: #4586a0;
 }
 
-.contacto{
-    list-style-type: none;
-    line-height: 2.0;
-    
-}
-/*Cierre de footer*/
-
-/*Nose de donde es:*/
-.boton_principal{
-    background-color: #032533;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 2px;
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.boton_principal:hover{
-    background-color:#4586a0;
-}
-/*hasta aca*/
-
-/*Clase de cambioclaro/oscuro*/
-.tema{
-    font-size: 0.9em;
-    color:#032533;
-    font-weight: bold;
-}
-
-/*CLASES INICIO*/
-.iniciar-sesion{
+/* Formularios unificados estilo inicio.html (Inicio, Crear Usuario, Mi Admin) */
+.iniciar-sesion,
+.tarjeta-registro,
+.admin-formulario {
     width: 100%;
-    max-width: 450px;
-    flex-direction: column;
-    padding-bottom: 2em;
-    margin-top: 3em;
-    text-align: center;
-    border-color: #020202;
-    padding: 40px 30px;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
+    max-width: 480px;
+    background-color: rgba(244, 249, 251, 0.94);
+    padding: 35px 30px;
     border-radius: 10px;
-}
-
-.contenedor-h1{
-background-color: #5c595962;
-border-radius: 15px;
-}
-
-.iniciar-sesion form{
-    display: flex;
-    flex-direction: column;
-    max-width: 350px;
-    margin: 20px auto; 
-    gap: 15px;
-}
-
-.iniciar-sesion input{
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.iniciar-sesion input:focus{
-border-color: #888;
-    outline: none;
-}
-
-.login-container {
-    max-width: 400px; /* Un poco más angosto que el de registro */
-    margin: 50px auto;
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #67b8d8;
+    box-shadow: 0 8px 20px rgba(3, 37, 51, 0.22);
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.login-container h2 {
+
+.admin-formulario {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.contenedor-h1,
+.cabecera-registro {
     text-align: center;
-    color: #333;
-    margin-bottom: 10px;
-    font-family: sans-serif;
+    border-bottom: 2px solid #67b8d8;
+    padding-bottom: 12px;
+}
+
+.contenedor-h1 h1,
+.cabecera-registro h1,
+.admin-formulario h2 {
+    color: #032533;
+    font-size: 1.6em;
+    margin-bottom: 5px;
+}
+
+.cabecera-registro p {
+    color: #0a3a4d;
+    font-size: 0.95em;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.fila-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .fila-form.dos-columnas {
+        flex-direction: row;
+    }
+    .fila-form.dos-columnas .grupo-form {
+        flex: 1;
+    }
+}
+
+.grupo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
 }
 
 .login-label {
     font-size: 14px;
     font-weight: 600;
-    color: #4a4a4a;
+    color: #032533;
     display: block;
-    margin-bottom: 5px;
 }
+
 .login-input {
     width: 100%;
     padding: 12px;
-    border: 1px solid #d1d5db;
+    border: 1px solid #9ecce0;
     border-radius: 6px;
-    background-color: #f9fafb;
+    background-color: #ffffff;
     font-size: 15px;
-    color: #333;
-    box-sizing: border-box;
-    transition: all 0.3s ease;
+    color: #032533;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
+
+.login-input:focus {
+    border-color: #032533;
+    box-shadow: 0 0 0 2px rgba(103, 184, 216, 0.35);
+    outline: none;
+}
+
 .login-btn {
-    margin-top: 15px;
-    padding: 12px;
-    background-color: #3b82f6;
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: #032533;
     color: #ffffff;
     border: none;
     border-radius: 6px;
@@ -205,361 +246,428 @@ border-color: #888;
     transition: background-color 0.3s ease, transform 0.1s ease;
     width: 100%;
 }
+
 .login-btn:hover {
-    background-color: #2563eb;
+    background-color: #4586a0;
 }
 
 .login-btn:active {
     transform: scale(0.98);
 }
-.primera-vez{
-    background-color: #ffffff;
-    max-width: 450px; 
-    width: 90%; 
-    margin: 30px auto;
-    padding: 30px 40px; 
-    border-radius: 8px;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+.acciones-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.acciones-form .login-btn,
+.acciones-form .boton_secundario {
+    flex: 1;
+    margin-top: 0;
+    text-align: center;
+}
+
+.acciones-registro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.link-sutil {
+    color: #0a3a4d;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+    transition: color 0.3s;
+}
+
+.link-sutil:hover {
+    color: #4586a0;
+    text-decoration: underline;
+}
+
+.primera-vez {
+    background-color: rgba(244, 249, 251, 0.94);
+    max-width: 480px;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 10px;
+    border: 1px solid #67b8d8;
+    box-shadow: 0 8px 20px rgba(3, 37, 51, 0.18);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 15px;
+    gap: 12px;
 }
 
-.titulo-inicio{
-    font-size: 20px;
+.titulo-inicio {
+    font-size: 24px;
     margin: 0;
-    color: #333;
+    color: #032533;
+    background-color: rgba(244, 249, 251, 0.9);
+    padding: 8px 22px;
+    border-radius: 8px;
 }
 
-.parrafo-inicio{
+.primera-vez .titulo-inicio {
+    background-color: transparent;
+    padding: 0;
+    font-size: 22px;
+}
+
+.parrafo-inicio {
     font-size: 15px;
-    color: #666;
+    color: #0a3a4d;
     margin: 0;
     line-height: 1.5;
 }
+
 .boton_secundario {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #0653ee;
+    padding: 12px 20px;
+    background-color: #4586a0;
     color: #ffffff;
-    text-decoration: none; 
-    font-weight: 500;
-    border: 1px solid #0453f1;
-    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
     transition: background-color 0.2s ease;
 }
 
 .boton_secundario:hover {
-    background-color: #eff2f8; 
+    background-color: #032533;
 }
 
-/*INTERFAZ CREAR USUARIO*/
-.crear-usuario form{
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    gap: 12px 2px;
-    max-width: 350px;
-    margin: 0 auto;
-    margin-top: 10px;
-    align-items: center;
-}
-
-.crear-usuario button{
-    margin-left: 19em;
-    padding: 5px;
-    justify-self: center;             
-    width: auto;                     
-    padding-left: 30px;
-    padding-right: 30px; 
-}
-
-.contacto{
-    list-style-type: none;
-}
-
-/*pag usuario*/
-.controles-vista{
+/* Página usuario y tarjetas de paquetes */
+.controles-vista {
     display: flex;
-    align-self: flex-end; 
-    gap: 15px;
-    margin-bottom: 20px;
-    background-color: rgba(255, 255, 255, 0.3); 
-    padding: 5px 25px;
-    border-radius: 2px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
-}
-
-
-.navegacion a{
-    text-decoration: none;
-    padding: 10px 15px; /* Redujo el padding para que entre todo dentro*/
-    text-align: center;
-    color: rgb(16, 68, 48);
-    font-size: 15px;
-    font-weight: bold;
-    
-}
-
-.usuario-header {
-    display: flex;
+    align-self: flex-end;
     align-items: center;
-    gap: 8px;
-    
-    /*Con esto se puede ajustar la posición del nombre y la imagen del usuario en el header*/
-}
-
-.usuario-header p {
-    /*Nos permite manipular el parrafo del usuario*/
+    gap: 10px;
+    background-color: rgba(244, 249, 251, 0.94);
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 1px solid #67b8d8;
+    box-shadow: 0 4px 10px rgba(3, 37, 51, 0.15);
+    color: #032533;
     font-weight: bold;
-    color: rgb(16, 68, 48);
-    font-size: 14px;
-    gap: 5px; /* Espacio entre el nombre y la imagen */
 }
 
-.img-usuario {
-    /*Para tener un mejor control del img cuenta*/
-    width: 50px;       /* Tamaño chico y controlado para el header */
-}
-
-.navegacion a:hover{
-    background-color: #4586a0;
-}
-
-.navegacion{
-    display: flex; /*Agregamos display*/
-    margin-top: 0;/*Para que alinee al centro*/
-    gap: 5px;  /*podemos controlar el espacio en el nav para poder manipularlo mejor*/
-    
-}
-
-.tarjetas img{
-    width: 100%;
-    height: auto;
-}
-
-.tarjetas{
+.tarjetas {
     display: flex;
     justify-content: center;
     gap: 1.5em;
     flex-wrap: wrap;
     margin-top: 10px;
-    width: 100%;/*agregue estos 2 para que sea responsive*/
+    width: 100%;
     max-width: 1200px;
 }
 
-.tarjetas article{
+.tarjetas article {
     width: 325px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
+    background-color: rgba(244, 249, 251, 0.96);
+    border-radius: 10px;
+    border: 1px solid #67b8d8;
     overflow: hidden;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    margin: 20px;
+    box-shadow: 0 6px 15px rgba(3, 37, 51, 0.18);
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.tarjetas li{
+.tarjetas article h2,
+.tarjetas article h3,
+.tarjetas article p,
+.tarjetas article ul,
+.contenido-paquete {
+    padding: 0 15px;
+}
+
+.tarjetas article h2,
+.tarjetas article h3 {
+    color: #032533;
+}
+
+.contenido-paquete {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 10px;
+}
+
+.tarjetas img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tarjetas li {
     list-style-type: none;
     font-style: oblique;
     font-weight: bold;
+    color: #0a3a4d;
 }
 
-.tarjetas button{
-    padding: .5em 1em;
-    border-radius: .4em;
+.tarjetas button {
+    margin: 5px 15px 0 15px;
+    padding: 0.65em 1em;
+    border-radius: 6px;
     border: none;
-    background-color: red;
+    background-color: #032533;
     color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
-.tarjetas button:active{
-    background-color: rgb(184, 2, 2);
+.tarjetas button:hover {
+    background-color: #4586a0;
 }
 
-/*la foto de santa cruz quedaba en distinta resolucion*/
-.santa-cruz img{
-    width: 380px;
+.tarjetas label,
+.tarjetas input[type="checkbox"] {
+    margin-left: 15px;
+    color: #032533;
+    font-weight: 600;
 }
-/*Paquetes*/
-.diseño-paq{
+
+/* Detalle de Paquetes */
+.diseño-paq {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     gap: 30px;
     width: 100%;
-    max-width: 1100px; 
+    max-width: 1100px;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.2); 
+    background-color: rgba(244, 249, 251, 0.95);
     padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #67b8d8;
+    box-shadow: 0 8px 20px rgba(3, 37, 51, 0.2);
 }
 
 @media (min-width: 850px) {
-    .layout-paquete {
+    .diseño-paq {
         flex-direction: row;
         align-items: flex-start;
     }
 }
+
 .paquete-info {
-    flex: 2; 
-    min-width: 0; /* evita que el contenido empuje el ancho de la pantalla */
+    flex: 2;
+    min-width: 0;
 }
+
 .paquete-precio {
     flex: 1;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    background-color: #e4f1f6;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #67b8d8;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
+
+.paquete-precio h2 {
+    color: #032533;
+    font-size: 1.4em;
+    border-bottom: 2px solid #67b8d8;
+    padding-bottom: 8px;
+}
+
 .img-detalle {
     width: 100%;
     height: auto;
-    max-width: 100%;
     max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
     margin-bottom: 25px;
 }
+
 .titulo-paq {
     color: #0a3a4d;
     margin-bottom: 20px;
     font-size: 2em;
 }
+
 .paquete-info h2 {
     color: #033141;
     margin: 30px 0 15px 0;
     border-bottom: 2px solid #67b8d8;
     padding-bottom: 5px;
 }
+
 .lista-detalles {
     list-style: none;
-    line-height: 1.6;
+    line-height: 1.8;
+    color: #032533;
 }
-.paquete-precio {
-    background-color: #f4f7f6;
-    padding: 25px;
-    border-radius: 10px;
-    border: 1px solid #d1d9d6;
-}
+
 .caja-valores p {
     display: flex;
-    justify-content: space-between;/*lo tiro bien para cada lado*/
+    justify-content: space-between;
     gap: 10px;
-    margin-bottom: 15px;
-    font-size: 1.1em;
-    color: #0e0d0d;
+    margin-bottom: 12px;
+    font-size: 1.05em;
+    color: #032533;
 }
+
+/* Botón Comprar mejorado */
 .boton-principal {
-    width: 25%;
-    min-width: 140px;
-    background-color:#0be239;
-    font-size: 1.2em;
-    padding: 15px;
-    margin: 20px 0;
+    width: 100%;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: #ffffff;
+    font-size: 1.15em;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    padding: 14px 24px;
+    border: none;
     border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+    transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
-.boton-principal:hover{
-    background-color: rgb(58, 54, 54);
-    color: #FFFFFF;
+
+.boton-principal:hover {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    box-shadow: 0 6px 16px rgba(5, 150, 105, 0.45);
+    transform: translateY(-2px);
 }
-.metodos-pago{
-    box-shadow: #020202;
-    background-color: #FFFFFF;
-    border-color: #033141;
-    border-radius: 12px;
-    padding: 10px 20px;
+
+.boton-principal:active {
+    transform: translateY(0);
 }
+
+.metodos-pago {
+    background-color: #f4f9fb;
+    border: 1px solid #9ecce0;
+    border-radius: 10px;
+    padding: 15px 20px;
+}
+
 .metodos-pago h3 {
     font-size: 1em;
-    color: #f5f0f0;
-    background-color: #3b5f8f;
-    margin-bottom: 10px;
+    color: #ffffff;
+    background-color: #032533;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 12px;
 }
+
 .metodos-pago ul {
     list-style: none;
     font-size: 0.9em;
-    color: #555;
-    line-height: 1.6;
+    color: #0a3a4d;
+    line-height: 1.7;
 }
-/*MI CUENTA*/
+
+/* Mi Cuenta */
 .panel-cuenta {
     display: flex;
     flex-direction: column;
     gap: 30px;
     width: 100%;
-    max-width: 90em; 
-    margin: 2 auto;
-    background-color: rgba(255, 255, 255, 0.4);
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: rgba(244, 249, 251, 0.95);
     padding: 30px;
-    border-radius: 67px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+    border-radius: 12px;
+    border: 1px solid #67b8d8;
+    box-shadow: 0 8px 20px rgba(3, 37, 51, 0.2);
 }
+
 @media (min-width: 768px) {
     .panel-cuenta {
         flex-direction: row;
         align-items: flex-start;
     }
     .tarjeta-datos {
-        flex: 1; 
+        flex: 1;
     }
     .tarjeta-fav {
-        flex: 2; 
+        flex: 2;
     }
 }
 
-.tarjeta-datos, .tarjeta-favoritos {
-    background-color: #f4f7f6;
+.tarjeta-datos,
+.tarjeta-fav {
+    background-color: #e4f1f6;
     padding: 25px;
     border-radius: 10px;
-    border: 1px solid #d1d9d6;
+    border: 1px solid #67b8d8;
 }
 
-.tarjeta-datos h2, .tarjeta-favoritos h2 {
+.tarjeta-datos h2,
+.tarjeta-fav h2 {
     color: #032533;
     margin-bottom: 20px;
-    border-bottom: 2px solid #67b8d8;/*es la linea de abajo de datos personales, la uso para separar la jerarquia del titulo con los datos*/
+    border-bottom: 2px solid #67b8d8;
     padding-bottom: 10px;
 }
+
 .datos-lista p {
     margin-bottom: 15px;
-    color: #333;
-    font-size: 1.1em;
-    overflow-wrap: anywhere; /* para que el email largo no se salga de la caja */
+    color: #032533;
+    font-size: 1.05em;
+    overflow-wrap: anywhere;
 }
+
 .grilla-fav {
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));/*autofit lo investigue con ia pq sino quedaba mal*/
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
 }
+
 .item-fav {
+    background-color: #f4f9fb;
+    border: 1px solid #9ecce0;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 10px rgba(3, 37, 51, 0.14);
     text-align: center;
 }
+
 .item-fav img {
     width: 100%;
-    height: 120px; 
-    object-fit: cover;/*Si no lo uso se me distorsiona la imagen*/
+    height: 130px;
+    object-fit: cover;
 }
 
 .item-fav h3 {
-    font-size: 1.5em;
+    font-size: 1.15em;
     color: #032533;
-    padding: 15px 10px;
+    padding: 12px 10px;
 }
-.boton-principal-micuenta{
+
+.boton-principal-micuenta {
     background-color: #032533;
     color: #ffffff;
-    padding: 12px 24px; 
-    border: none; 
+    padding: 12px 24px;
+    border: none;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     text-align: center;
     display: inline-block;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
 }
 
-.boton-principal-micuenta:hover{
-    background-color:#4586a0;
-    color: #FFFFFF;
+.boton-principal-micuenta:hover {
+    background-color: #4586a0;
 }
-/*Mi admin*/
+
+/* Mi Admin */
 .panel-admin {
     display: flex;
     flex-direction: column;
@@ -568,172 +676,79 @@ border-color: #888;
     max-width: 1200px;
     margin: 0 auto;
 }
-.fila-form {
-    background-color: rgba(255, 255, 255, 0.3);
-    padding: 30px;
-    margin-top: 1em;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 
-}
-.admin-formulario h2, .admin-listado h2 {
+.admin-listado h2 {
     color: #032533;
-    margin-bottom: 25px;
+    background-color: rgba(244, 249, 251, 0.92);
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
     border-bottom: 2px solid #67b8d8;
-    padding-bottom: 10px;
     text-align: center;
 }
-.grupo-form {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    text-align: left;
-    min-width: 0;
-}
-@media (min-width: 768px) {
-    .fila-form {
-        flex-direction: row;
-    }
-    .fila-form .grupo-form {
-        flex: 1;
-    }
-}
-.acciones-form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 15px;
-    margin-top: 10px;
-    border-top: 1px solid #eee;
-    padding-top: 20px;
-}
-.tarjeta-registro {
-    max-width: 600px;
-}
-.cabecera-registro {
-    margin-bottom: 25px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 15px;
-}
-.acciones-registro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-}
-.link-sutil {
-    color: #67b8d8;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9em;
-    transition: color 0.3s;
-}
 
-header .logo{
-    max-width: 100%;
-    height: auto;
-}
-
+/* Responsive móvil */
 @media (max-width: 768px) {
-    header{
+    header {
         justify-content: center;
         text-align: center;
         padding: 15px;
     }
-    .navegacion{
+    .navegacion {
         flex-wrap: wrap;
         justify-content: center;
     }
-    main{
+    main {
         padding: 1.5em 0.75em;
     }
-    .controles-vista{
+    .controles-vista {
         align-self: center;
-    }
-    .tarjetas article{
-        margin: 10px;
     }
 }
 
 @media (max-width: 600px) {
-    header .logo{
+    header .logo {
         width: 200px;
     }
-    .navegacion a{
+    .navegacion a {
         padding: 8px 10px;
         font-size: 14px;
     }
-
-    
-    .tarjetas{
-        gap: 0.5em;
-    }
-    .tarjetas article{
+    .tarjetas article {
         width: 100%;
         max-width: 325px;
         margin: 10px 0;
     }
-    .santa-cruz img{
-        width: 100%;
-    }
-
-    
     .iniciar-sesion,
-    .primera-vez{
+    .primera-vez,
+    .tarjeta-registro,
+    .admin-formulario {
         padding: 25px 15px;
-        margin-top: 1em;
     }
-    .iniciar-sesion form{
-        grid-template-columns: 1fr;
-        gap: 8px;
-    }
-    .iniciar-sesion .boton_principal{
-        width: 100%;
-    }
-    .tarjeta-registro{
-        width: 100%;
-    }
-
-    
-    .diseño-paq{
+    .diseño-paq {
         padding: 15px;
         gap: 15px;
     }
-    .titulo-paq{
+    .titulo-paq {
         font-size: 1.5em;
     }
-    .paquete-precio{
+    .paquete-precio {
         padding: 15px;
     }
-    .caja-valores p{
+    .caja-valores p {
         flex-wrap: wrap;
     }
-    .boton-principal{
-        width: 100%;
-        max-width: 320px;
-    }
-
-    
-    .panel-cuenta{
+    .panel-cuenta {
         padding: 15px;
-        border-radius: 25px;
     }
     .tarjeta-datos,
-    .tarjeta-favoritos{
+    .tarjeta-fav {
         padding: 15px;
-    }
-
-    .fila-form{
-        padding: 15px;
-    }
-    .acciones-form{
-        justify-content: center;
     }
 }
 
-/*-----------------------------------------------------*/
-
-.oscuro{
+/* Clases dinámicas usadas por JS */
+.oscuro {
     background-color: #000;
     color: white;
 }
@@ -746,12 +761,240 @@ header .logo{
 
 .lista article {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    width: 100%;
+    max-width: 900px;
+    padding-bottom: 0;
     gap: 20px;
-    background-color: #FFFFFF;
+    background-color: rgba(244, 249, 251, 0.96);
 }
 
 .lista article img {
-    width: 120px;
-    height: 100px;
+    width: 160px;
+    height: 120px;
+}
+
+/* Botón "Agregar al carrito" en la vista de lista
+   (mismo color que en la vista de tarjetas) */
+.lista button {
+    margin-right: 25px;        /* espacio entre el botón y el borde derecho */
+    padding: 0.65em 1.4em;
+    border-radius: 25px;       /* bordes bien redondeados */
+    border: none;
+    background-color: #032533;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;       /* el texto queda en una sola línea */
+    flex-shrink: 0;            /* evita que el botón se achique */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.lista button:hover {
+    background-color: #4586a0;
+}
+
+/* ==========================================================
+   Carrito en el header (al lado de la luna)
+   ========================================================== */
+.herramientas-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.carrito-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.carrito-header:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.contador-carrito {
+    position: absolute;
+    top: -4px;
+    right: -6px;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 5px;
+    border-radius: 10px;
+    background-color: #032533;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+}
+
+.rebote {
+    animation: rebote 0.4s ease;
+}
+
+@keyframes rebote {
+    50% {
+        transform: scale(1.35);
+    }
+}
+
+/* ==========================================================
+   Modo oscuro (la clase "oscuro" la agrega codigo.js en el <body>)
+   ========================================================== */
+body.oscuro {
+    background-color: #0b151c;
+    color: #e6eef2;
+}
+
+/* Header y footer */
+body.oscuro header {
+    background-color: #0e1c26;
+}
+
+body.oscuro .navegacion a,
+body.oscuro .usuario-header p,
+body.oscuro .tema {
+    color: #e6eef2;
+}
+
+body.oscuro .navegacion a:hover {
+    background-color: #1f3a4a;
+}
+
+/* Íconos negros (luna, sol, carrito) pasan a blancos */
+body.oscuro .tema img,
+body.oscuro .carrito-header img {
+    filter: invert(1);
+}
+
+body.oscuro .carrito-header:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+body.oscuro .contador-carrito {
+    background-color: #67b8d8;
+    color: #032533;
+}
+
+body.oscuro footer {
+    background-color: #0e1c26;
+    border-top-color: #4586a0;
+    color: #e6eef2;
+}
+
+body.oscuro footer h2 {
+    color: #e6eef2;
+}
+
+body.oscuro footer ul.contacto a {
+    color: #8fd3ec;
+}
+
+/* Fondo de la página más oscuro */
+body.oscuro main {
+    background-color: #0b151c;
+    background-image: linear-gradient(rgba(5, 15, 22, 0.72), rgba(5, 15, 22, 0.82)), url('./Imagenes/fondoInicioPrincipal.jpg');
+}
+
+/* Títulos y controles */
+body.oscuro .titulo-inicio,
+body.oscuro .controles-vista {
+    background-color: rgba(22, 36, 46, 0.92);
+    color: #e6eef2;
+}
+
+body.oscuro .controles-vista {
+    border-color: #8a9aa5;
+}
+
+/* Tarjetas y vista de lista */
+body.oscuro .tarjetas article,
+body.oscuro .lista article {
+    background-color: rgba(30, 38, 46, 0.94);
+    border-color: #2c3e4a;
+}
+
+body.oscuro .tarjetas article h2,
+body.oscuro .tarjetas article p,
+body.oscuro .tarjetas li,
+body.oscuro .tarjetas label,
+body.oscuro .lista article h2,
+body.oscuro .lista article p,
+body.oscuro .lista li,
+body.oscuro .lista label {
+    color: #e6eef2;
+}
+
+body.oscuro .tarjetas button,
+body.oscuro .lista button {
+    background-color: #0b1d26;
+    border: 1.5px solid #cfe3ea;
+    color: #ffffff;
+}
+
+body.oscuro .tarjetas button:hover,
+body.oscuro .lista button:hover {
+    background-color: #4586a0;
+}
+
+/* Formularios: Crear usuario, Iniciar sesión y Mi Admin */
+body.oscuro .iniciar-sesion,
+body.oscuro .tarjeta-registro,
+body.oscuro .admin-formulario,
+body.oscuro .primera-vez {
+    background-color: rgba(30, 38, 46, 0.94);
+    border-color: #2c3e4a;
+}
+
+body.oscuro .contenedor-h1,
+body.oscuro .cabecera-registro {
+    border-bottom-color: #4586a0;
+}
+
+body.oscuro .contenedor-h1 h1,
+body.oscuro .cabecera-registro h1,
+body.oscuro .admin-formulario h2,
+body.oscuro .primera-vez .titulo-inicio,
+body.oscuro .login-label {
+    color: #e6eef2;
+}
+
+body.oscuro .cabecera-registro p,
+body.oscuro .parrafo-inicio {
+    color: #b7c7cf;
+}
+
+body.oscuro .login-input {
+    background-color: #12202a;
+    border-color: #3a5260;
+    color: #e6eef2;
+}
+
+body.oscuro .login-input::placeholder {
+    color: #8aa0ab;
+}
+
+body.oscuro .login-input:focus {
+    border-color: #67b8d8;
+}
+
+body.oscuro .login-btn {
+    background-color: #0b1d26;
+    border: 1.5px solid #cfe3ea;
+}
+
+body.oscuro .login-btn:hover {
+    background-color: #4586a0;
+}
+
+body.oscuro .link-sutil {
+    color: #8fd3ec;
 }

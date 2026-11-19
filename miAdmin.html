@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="codigo.js" defer></script>
     <title>@Usuario_Administrador Perfil</title>
 </head>
 <body>
@@ -19,85 +20,90 @@
             <a href="usuario.html">Cambiar a Usuario</a>
             <a href="inicio.html">Cerrar sesión</a>
         </nav>
+
         <div class="tema">
             <input type="radio" id="tema-oscuro" name="tema">
             <label for="tema-oscuro">
-                <img src="./Imagenes/luna.svg" alt="Tema oscuro" width="24" style="cursor: pointer;">
+                <img src="./Imagenes/luna.svg" alt="Tema oscuro" width="24">
             </label>
             
             <input type="radio" id="tema-claro" name="tema" checked>
             <label for="tema-claro">
-                <img src="./Imagenes/sol.svg" alt="Tema claro" width="24" style="cursor: pointer;">
+                <img src="./Imagenes/sol.svg" alt="Tema claro" width="24">
             </label>
         </div>
+
         <div class="usuario-header">
-        <p>@Usuario_Administrador</p>
+            <p>@Usuario_Administrador</p>
             <img src="./Imagenes/logopj.png"
             alt="imagen descriptiva de usuario"
             class="img-usuario">
         </div>
     </header>
+
     <main>
         <div class="panel-admin">
-        <section>
-            <h2>Agregar nuevo paquete</h2>
-                <form method="post">
-            <div class="fila-form">
+            <section class="admin-formulario">
+                <div class="contenedor-h1">
+                    <h2>Agregar nuevo paquete</h2>
+                </div>
+
+                <form class="login-container" method="post">
+                    <div class="fila-form dos-columnas">
                         <div class="grupo-form">
-                            <label for="origen">Origen:</label>
-                            <input type="text" id="origen" name="origen" required>
+                            <label class="login-label" for="origen">Origen:</label>
+                            <input class="login-input" type="text" id="origen" name="origen" placeholder="Ej: Buenos Aires" required>
                         </div>
                         <div class="grupo-form">
-                            <label for="destino">Destino:</label>
-                            <input type="text" id="destino" name="destino" required>
+                            <label class="login-label" for="destino">Destino:</label>
+                            <input class="login-input" type="text" id="destino" name="destino" placeholder="Ej: Bariloche" required>
                         </div>
                     </div>
 
-                    <div class="fila-form">
+                    <div class="fila-form dos-columnas">
                         <div class="grupo-form">
-                            <label for="Fecha_Inicio">Fecha de inicio:</label>
-                            <input type="date" id="Fecha_Inicio" name="Fecha_Inicio" required>
+                            <label class="login-label" for="Fecha_Inicio">Fecha de inicio:</label>
+                            <input class="login-input" type="date" id="Fecha_Inicio" name="Fecha_Inicio" required>
                         </div>
                         <div class="grupo-form">
-                            <label for="Fecha_Fin">Fecha de fin:</label>
-                            <input type="date" id="Fecha_Fin" name="Fecha_Fin" required>
+                            <label class="login-label" for="Fecha_Fin">Fecha de fin:</label>
+                            <input class="login-input" type="date" id="Fecha_Fin" name="Fecha_Fin" required>
                         </div>
                     </div>
 
-                    <div class="fila-form">
+                    <div class="fila-form dos-columnas">
                         <div class="grupo-form">
-                            <label for="Cantidad">Cantidad de días:</label>
-                            <input type="number" id="Cantidad" name="Cantidad" required>
+                            <label class="login-label" for="Cantidad">Cantidad de días:</label>
+                            <input class="login-input" type="number" id="Cantidad" name="Cantidad" placeholder="Ej: 7" required>
                         </div>
                         <div class="grupo-form">
-                            <label for="precio">Precio ($):</label>
-                            <input type="number" id="precio" name="precio" required>
+                            <label class="login-label" for="precio">Precio ($):</label>
+                            <input class="login-input" type="number" id="precio" name="precio" placeholder="Ej: 650000" required>
                         </div>
                     </div>
 
                     <div class="grupo-form">
-                        <label for="descripcion">Descripción:</label>
-                        <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+                        <label class="login-label" for="descripcion">Descripción:</label>
+                        <textarea class="login-input" id="descripcion" name="descripcion" rows="4" placeholder="Detalle del paquete turístico..."></textarea>
                     </div>
 
                     <div class="acciones-form">
                         <button type="button" class="boton_secundario">Adjuntar Imagen</button>
-                        <button type="submit" class="boton_principal">Cargar Paquete</button>
+                        <button type="submit" class="login-btn">Cargar Paquete</button>
                     </div>
                 </form>
             </section>
 
             <section class="admin-listado">
-            <h2>Paquetes turísticos activos</h2>
+                <h2>Paquetes turísticos activos</h2>
 
-<div class="tarjetas">
+                <div class="tarjetas">
                     <article class="tarjeta-paquete">
                         <a href="PaqueteBariloche.html">
                             <img src="./Imagenes/fotoCentroBariloche.jpg" alt="Lago y montañas en Bariloche" class="img-paquete">
-                        <div class="contenido-paquete">
                         </a>
                         <div class="contenido-paquete">
-                            <h2>Bariloche</h2>
+                            <h3>Bariloche</h3>
                             <p>Siete días entre lagos y montañas, con excursión al Cerro Catedral.</p>
                             <ul>
                                 <li>Duración: 7 días</li>
@@ -106,12 +112,12 @@
                         </div>
                     </article>
 
-        <article class="tarjeta-paquete">
+                    <article class="tarjeta-paquete">
                         <a href="PaqueteIguazu.html">
                             <img src="./Imagenes/Cataratas_del_Iguazú_en_Argentina.jpg" alt="Cataratas del Iguazú" class="img-paquete">
                         </a>
                         <div class="contenido-paquete">
-                            <h2>Cataratas del Iguazú</h2>
+                            <h3>Cataratas del Iguazú</h3>
                             <p>Cinco días recorriendo las cataratas desde ambos lados.</p>
                             <ul>
                                 <li>Duración: 5 días</li>
@@ -120,12 +126,12 @@
                         </div>
                     </article>
                     
-        <article class="tarjeta-paquete">
+                    <article class="tarjeta-paquete">
                         <a href="PaqueteCancun.html">
-                            <img src="./Imagenes/cancun.jpg" alt="Playa en Cancún" class="img-paquete">
+                            <img src="./Imagenes/Cancun.jpg" alt="Playa en Cancún" class="img-paquete">
                         </a>            
-                            <div class="contenido-paquete">
-                            <h2>Cancún</h2>
+                        <div class="contenido-paquete">
+                            <h3>Cancún</h3>
                             <p>Diez días all inclusive frente al mar Caribe.</p>
                             <ul>
                                 <li>Duración: 10 días</li>
@@ -133,14 +139,13 @@
                             </ul>
                         </div>
                     </article>
-                    
 
-        <article class="tarjeta-paquete">
-                            <a href="PaqueteMendoza.html">
-                                <img src="./Imagenes/mendoza.jpg" alt="Viñedos en Mendoza" class="img-paquete">
-                            </a>            
-                            <div class="contenido-paquete">
-                            <h2>Mendoza</h2>
+                    <article class="tarjeta-paquete">
+                        <a href="PaqueteMendoza.html">
+                            <img src="./Imagenes/Mendoza.jpg" alt="Viñedos en Mendoza" class="img-paquete">
+                        </a>            
+                        <div class="contenido-paquete">
+                            <h3>Mendoza</h3>
                             <p>Cuatro días de bodegas, degustaciones y cordillera.</p>
                             <ul>
                                 <li>Duración: 4 días</li>
@@ -148,25 +153,33 @@
                             </ul>
                         </div>
                     </article>
-                    
                 
-        <article class="tarjeta-paquete">
-                            <a href="PaqueteSantaCruz.html">
-                                <img src="./Imagenes/SantaCruz.jpg" alt="El calafate Santa Cruz" class="img-paquete"> 
-                            </a>
-                            <div class="contenido-paquete">
-                            <h2>Santa Cruz</h2>
-                            <p>Cuatro días de bodegas, degustaciones y cordillera.</p>
+                    <article class="tarjeta-paquete">
+                        <a href="PaqueteSantaCruz.html">
+                            <img src="./Imagenes/SantaCruz.jpg" alt="El Calafate Santa Cruz" class="img-paquete"> 
+                        </a>
+                        <div class="contenido-paquete">
+                            <h3>Santa Cruz</h3>
+                            <p>Catorce días recorriendo glaciares y paisajes patagónicos.</p>
                             <ul>
                                 <li>Duración: 14 días</li>
                                 <li>Precio: $ 2.000.000</li>
                             </ul>
                         </div>
                     </article>
-
                 </div>
             </section>
         </div>
     </main>
+
+    <footer>
+        <h2>Contacto</h2>
+        <ul class="contacto">
+            <li>Email: <a href="mailto:contacto@luma.com">contacto@luma.com</a></li>
+            <li>WhatsApp: <a href="https://wa.me/541112345678">+54 11 1234-5678</a></li>
+            <li>Dirección: Av. Corrientes 1234, CABA</li>
+            <li>Horario: Lunes a Viernes de 9 a 18 h</li>
+        </ul>
+    </footer>
 </body>
 </html>

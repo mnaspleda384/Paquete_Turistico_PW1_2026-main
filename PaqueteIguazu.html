@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="codigo.js" defer></script>
     <title>Paquete Iguazú</title>
 </head>
 <body>
@@ -21,81 +22,85 @@
         <div class="tema">
             <input type="radio" id="tema-oscuro" name="tema">
             <label for="tema-oscuro">
-                <img src="./Imagenes/luna.svg" alt="Tema oscuro" width="24" style="cursor: pointer;">
+                <img src="./Imagenes/luna.svg" alt="Tema oscuro" width="24">
             </label>
             
             <input type="radio" id="tema-claro" name="tema" checked>
             <label for="tema-claro">
-                <img src="./Imagenes/sol.svg" alt="Tema claro" width="24" style="cursor: pointer;">
+                <img src="./Imagenes/sol.svg" alt="Tema claro" width="24">
             </label>
         </div>
-        <p>@Usuario_1</p>
+        <div class="usuario-header">
+            <p>@Usuario_1</p>
             <img src="./Imagenes/logopj.png"
-            alt="imagen descriptiva de usuario fondo Bariloche,Argentina"
+            alt="imagen descriptiva de usuario"
             class="img-usuario">
-        </header>
-        <main>
-            <div class="diseño-paq">
+        </div>
+    </header>
+
+    <main>
+        <div class="diseño-paq">
             <section class="paquete-info">
                 <img src="./Imagenes/Cataratas_del_Iguazú_en_Argentina.jpg" alt="Imagen de Iguazú" class="img-detalle">
 
-                <h1 class="titulo-paq">CATARATAS DEL IGUAZU saliendo desde Buenos Aires</h1>
+                <h1 class="titulo-paq">CATARATAS DEL IGUAZÚ saliendo desde Buenos Aires</h1>
 
                 <ul class="lista-detalles">
-                    <li><strong>Duracion:</strong> 6 noches</li>
+                    <li><strong>Duración:</strong> 6 noches</li>
                     <li><strong>Saliendo desde:</strong> Buenos Aires</li>
-                    <li><strong>Fecha Salida</strong> 16/05/26 al 22/05/26</li>
-                    <li><strong>Pasajeros:</strong>2</li>
-                    <li><strong>Vuelo</strong> Directo</li>
+                    <li><strong>Fecha Salida:</strong> 16/05/26 al 22/05/26</li>
+                    <li><strong>Pasajeros:</strong> 2</li>
+                    <li><strong>Vuelo:</strong> Directo</li>
                 </ul>
 
                 <h2>El precio incluye</h2>
 
                 <ul class="lista-detalles">
                     <li>Aéreos - AEP/FTE/EZE</li>
-                    <li>TRASLADO DESDE AEROPUERTO HACIA HOTEL CENTRICO (PROMO)</li>
+                    <li>TRASLADO DESDE AEROPUERTO HACIA HOTEL CÉNTRICO (PROMO)</li>
                     <li>TRASLADO DESDE HOTEL GRAND HACIA AEROPUERTO (PROMO)</li>
-                    <li>Alojamiento: 6 noches en el Hotel Iguazú Grand </li>
-                    <li>Asistencia.</li>
-                    <li>Incluye 1 mochila o artículo personal en cabina de 3kg. No debe superar 45cm x 35cm x 25cm</li>
-                    <li>En caso de desearlo, podrás comprar equipaje a despachar al momento de hacer el check in online</li>
+                    <li>Alojamiento: 6 noches en el Hotel Iguazú Grand</li>
+                    <li>Asistencia al viajero.</li>
+                    <li>Incluye 1 mochila o artículo personal en cabina de 3kg (45cm x 35cm x 25cm).</li>
+                    <li>Podrás comprar equipaje a despachar al momento de hacer el check-in online.</li>
                 </ul>
             </section>
-            <aside class="paquete-precio">
-                <h1>Resumen de compra</h1>  
 
-                <section class="caja-valores">
-                <p>Precio por persona: <span>$240.000</span></p>
-                <p>Precio final (2 pax): <span>$480.000</span></p>
-                <p class="cuotas">Pagá en cuotas sin interés: <span>12 x $40.000</span></p>
-                </section>
-            </div>  
+            <section class="paquete-precio" aria-labelledby="titulo-resumen">
+                <h2 id="titulo-resumen">Resumen de compra</h2>  
+
+                <div class="caja-valores">
+                    <p>Precio por persona: <span>$240.000</span></p>
+                    <p>Precio final (2 pax): <span>$480.000</span></p>
+                    <p class="cuotas">Pagá en cuotas sin interés: <span>12 x $40.000</span></p>
+                </div>
+
                 <button type="button" class="boton-principal">Comprar</button>
 
-                <section class="metodos-pago">
+                <div class="metodos-pago">
                     <h3>Formas de pago</h3>
-                        <ul>
-                            <li>Tarjeta de crédito</li>
-                            <li>Tarjeta de débito</li>
-                            <li>Dos tarjetas</li>
-                            <li>Transferencia / Depósito</li>
-                            <li>Múltiples medios (pago offline)</li>
-                            <li>Dinero en cuenta</li>
-                            <li>Pago en pesos</li>
-                        </ul>
-                </section>
-            </aside>
+                    <ul>
+                        <li>Tarjeta de crédito</li>
+                        <li>Tarjeta de débito</li>
+                        <li>Dos tarjetas</li>
+                        <li>Transferencia / Depósito</li>
+                        <li>Múltiples medios (pago offline)</li>
+                        <li>Dinero en cuenta</li>
+                        <li>Pago en pesos</li>
+                    </ul>
+                </div>
+            </section>
         </div>
     </main>
-            <footer>
-<h2>Contacto</h2>
-    <ul class="contacto">
-        <li>Email: <a href="mailto:contacto@luma.com">contacto@luma.com</a></li>
-        <li>WhatsApp: <a href="https://wa.me/541112345678">+54 11 1234-5678</a></li>
-        <li>Dirección: Av. Corrientes 1234, CABA</li>
-        <li>Horario: Lunes a Viernes de 9 a 18 h</li>
-    </ul>
-    
+
+    <footer>
+        <h2>Contacto</h2>
+        <ul class="contacto">
+            <li>Email: <a href="mailto:contacto@luma.com">contacto@luma.com</a></li>
+            <li>WhatsApp: <a href="https://wa.me/541112345678">+54 11 1234-5678</a></li>
+            <li>Dirección: Av. Corrientes 1234, CABA</li>
+            <li>Horario: Lunes a Viernes de 9 a 18 h</li>
+        </ul>
     </footer>
 </body>
 </html>

@@ -1,62 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <title>Luma - Crear Usuario</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="codigo.js" defer></script>
+    <title>Luma - Crear Usuario</title>
 </head>
 <body>
-        <header>
-                <img src="./Imagenes/logoprueba.png" 
-                alt="Luma - Viajes que empiezan antes de partir"
-                width="350" class="logo">
+    <header>
+        <img src="./Imagenes/logoprueba.png" 
+            alt="Luma - Viajes que empiezan antes de partir"
+            width="350" class="logo">
 
-                <div class="tema">
-                        <input type="radio" id="tema-oscuro" name="tema">
-                        <label for="tema-oscuro">Tema oscuro</label>
-                        <input type="radio" id="tema-claro" name="tema" checked>
-                        <label for="tema-claro">Tema claro</label>
+        <div class="tema">
+            <input type="radio" id="tema-oscuro" name="tema">
+            <label for="tema-oscuro">
+                <img src="./Imagenes/luna.svg" alt="Tema oscuro" width="24">
+            </label>
+            
+            <input type="radio" id="tema-claro" name="tema" checked>
+            <label for="tema-claro">
+                <img src="./Imagenes/sol.svg" alt="Tema claro" width="24">
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <section class="tarjeta-registro">
+            <div class="cabecera-registro">
+                <h1>Crear Usuario</h1>
+                <p>Completá tus datos para empezar a usar Luma.</p>
+            </div>
+    
+            <form class="login-container" action="inicio.html" method="post">
+                <div class="grupo-form">
+                    <label class="login-label" for="nombre">Nombre:</label>
+                    <input class="login-input" type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
                 </div>
-        </header>
-        <main>
-                <div class="tarjeta-acceso">
-                        <div class="cabecera-registro">
-                                <h1>Crear Usuario</h1>
-                                <p>Completá tus datos para empezar a usar Luma.</p>
-                        </div>
-                
-                        <form action="inicio.html" method="post">
-                                <div class="fila-form">
-                                        <div class="grupo-form">
-                                                <label for="nombre">Nombre:</label>
-                                                <input type="text" id="nombre" name="nombre" required>
-                                
-                                                <label for="apellido">Apellido:</label>
-                                                <input type="text" id="apellido" name="apellido" required>
 
-                                                <label for="mail">Email:</label>
-                                                <input type="email" id="mail" name="mail" required>
-        
-                                                <label for="usuario">Usuario:</label>
-                                                <input type="text" id="usuario" name="usuario" required>
-                
-                                                <label for="contrasena">Contraseña:</label>
-                                                <input type="password" id="contrasena" name="contrasena" required>
-                        
-                                                <label for="contrasena2">Repetir contraseña:</label>
-                                                <input type="password" id="contrasena2" name="contrasena2" required>
-                                        </div>
-                                </div>
-                
-                                <!-- Acciones del formulario -->
-                                <div class="acciones-registro">
-                                        <button type="submit" class="boton_principal">Registrarme</button>
-                                        <a href="inicio.html" class="link-sutil">Volver al inicio</a>
-                                </div>
-
-                        </form>
+                <div class="grupo-form">
+                    <label class="login-label" for="apellido">Apellido:</label>
+                    <input class="login-input" type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
                 </div>
-        </main>
-</body>
-</html>
+
+                <div class="grupo-form">
+                    <label class="login-label" for="mail">Email:</label>
+                    <input class="login-input" type="email" id="mail" name="mail" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="grupo-form">
+                    <label class="login-label" for="usuario">Usuario:</label>
+                    <input class="login-input" type="text" id="usuario" name="usuario" placeholder="Elegí un nombre de usuario" required>
+                </div>
+
+                <div class="grupo-form">
+                    <label class="login-label" for="contrasena">Contraseña:</label>
+                    <input class="login-input" type="password" id="contrasena" name="contrasena" placeholder="••••••••" required>
+                </div>
+
+                <div class="grupo-form">
+                    <label class="login-label" for="contrasena2">Repetir contraseña:</label>
+                    <input class="login-input" type="password" id="contrasena2" name="contrasena2" placeholder="••••••••" required>
+                </div>
+    
+                <div class="acciones-registro">
+                    <button type="submit" class="login-btn">Registrarme</button>
+                    <a href="inicio.html" class="link-sutil">Volver al inicio</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Contacto</h2>
+        <ul class="contacto">
+            <li>Email: <a href="mailto:contacto@luma.com">contacto@luma.com</a></li>
+            <li>WhatsApp: <a href="https://wa.me/541112345678">+54 11 1234-5678</a></li>
+            <li>Dirección: Av. Corrientes 1234, CABA</li>
+            <li>Horario: Lunes a Viernes de 9 a 18 h</li>

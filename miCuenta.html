@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="codigo.js" defer></script>
     <title>@Usuario_1 Perfil</title>
 </head>
 <body>
     <header>
-    <a href="usuario.html">
+        <a href="usuario.html">
             <img src="./Imagenes/logoprueba.png"
             alt="Luma - Viajes que empiezan antes de partir"
             width="300" class="logo">
@@ -21,65 +22,65 @@
         <div class="tema">
             <input type="radio" id="tema-oscuro" name="tema">
             <label for="tema-oscuro">
-                <img src="./Imagenes/luna.svg" alt="Tema oscuro" width="24" style="cursor: pointer;">
+                <img src="./Imagenes/luna.svg" alt="Tema oscuro" width="24">
             </label>
             
             <input type="radio" id="tema-claro" name="tema" checked>
             <label for="tema-claro">
-                <img src="./Imagenes/sol.svg" alt="Tema claro" width="24" style="cursor: pointer;">
+                <img src="./Imagenes/sol.svg" alt="Tema claro" width="24">
             </label>
         </div>
         <div class="usuario-header">
-        <p>@Usuario_1</p>
+            <p>@Usuario_1</p>
             <img src="./Imagenes/logopj.png"
             alt="imagen descriptiva de usuario"
             class="img-usuario">
-            </div>
+        </div>
     </header>
+
     <main>
-        <section class="panel-cuenta">
-            <article class="tarjeta-datos">
+        <div class="panel-cuenta">
+            <section class="tarjeta-datos">
                 <h2>Datos Personales</h2>
                 <div class="datos-lista">
-                <p><strong>Nombre: </strong> Lionel Andres</p>
-                <p><strong>Apellido: </strong> Messi </p>
-                <p> <strong>Email: </strong>lmessi264@unlam.alumno.edu.ar</p>
+                    <p><strong>Nombre:</strong> Lionel Andres</p>
+                    <p><strong>Apellido:</strong> Messi</p>
+                    <p><strong>Email:</strong> lmessi264@unlam.alumno.edu.ar</p>
                 </div>
                 
-                <button type="submit" class="boton-principal-micuenta">Cambiar contraseña</button>
-            </article>
+                <button type="button" class="boton-principal-micuenta">Cambiar contraseña</button>
+            </section>
 
-            <article class="tarjeta-fav">
+            <section class="tarjeta-fav">
                 <h2>Mis Favoritos</h2>
                 <div class="grilla-fav">
-                    <div class="item-fav">
-                <img src="./Imagenes/Cataratas_del_Iguazú_en_Argentina.jpg" alt="Cataratas del Iguazú" width="300">
-                <h3>Cataratas del Iguazú</h3>
+                    <article class="item-fav">
+                        <img src="./Imagenes/Cataratas_del_Iguazú_en_Argentina.jpg" alt="Cataratas del Iguazú" width="300">
+                        <h3>Cataratas del Iguazú</h3>
+                    </article>
+                    
+                    <article class="item-fav">
+                        <img src="./Imagenes/Cancun.jpg" alt="Playa en Cancún" width="300">
+                        <h3>Cancún</h3>
+                    </article>
+
+                    <article class="item-fav">
+                        <img src="./Imagenes/Mendoza.jpg" alt="Viñedos en Mendoza" width="300">
+                        <h3>Mendoza</h3>
+                    </article>
                 </div>
-                
-                <div class="grilla-fav">
-                    <div class="item-fav">
-                <img src="./Imagenes/cancun.jpg" alt="Playa en Cancún" width="300">
-                <h3>Cancún</h3>
-                </div>
-                <div class="grilla-fav">
-                    <div class="item-fav">
-                    <img src="./Imagenes/mendoza.jpg" alt="Viñedos en Mendoza" width="300">
-                <h3>Mendoza</h3>
-                </div>
-            </div>
-            </article>
-        </section>
+            </section>
+        </div>
     </main>
-        <footer>
-<h2>Contacto</h2>
-    <ul class="contacto">
-        <li>Email: <a href="mailto:contacto@luma.com">contacto@luma.com</a></li>
-        <li>WhatsApp: <a href="https://wa.me/541112345678">+54 11 1234-5678</a></li>
-        <li>Dirección: Av. Corrientes 1234, CABA</li>
-        <li>Horario: Lunes a Viernes de 9 a 18 h</li>
-    </ul>
-    
+
+    <footer>
+        <h2>Contacto</h2>
+        <ul class="contacto">
+            <li>Email: <a href="mailto:contacto@luma.com">contacto@luma.com</a></li>
+            <li>WhatsApp: <a href="https://wa.me/541112345678">+54 11 1234-5678</a></li>
+            <li>Dirección: Av. Corrientes 1234, CABA</li>
+            <li>Horario: Lunes a Viernes de 9 a 18 h</li>
+        </ul>
     </footer>
 </body>
 </html>

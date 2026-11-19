@@ -775,18 +775,17 @@ footer ul.contacto a:hover {
     height: 120px;
 }
 
-/* Botón "Agregar al carrito" en la vista de lista
-   (mismo color que en la vista de tarjetas) */
+/* Botón "Agregar al carrito" en la vista de lista */
 .lista button {
-    margin-right: 25px;        /* espacio entre el botón y el borde derecho */
+    margin-right: 25px;
     padding: 0.65em 1.4em;
-    border-radius: 25px;       /* bordes bien redondeados */
+    border-radius: 25px;
     border: none;
     background-color: #032533;
     color: white;
     font-weight: bold;
-    white-space: nowrap;       /* el texto queda en una sola línea */
-    flex-shrink: 0;            /* evita que el botón se achique */
+    white-space: nowrap;
+    flex-shrink: 0;
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
@@ -813,6 +812,7 @@ footer ul.contacto a:hover {
     border: none;
     border-radius: 50%;
     cursor: pointer;
+    text-decoration: none;
     transition: background-color 0.2s ease;
 }
 
@@ -844,6 +844,82 @@ footer ul.contacto a:hover {
     50% {
         transform: scale(1.35);
     }
+}
+
+/* ==========================================================
+   Página del Carrito (carrito.html)
+   ========================================================== */
+.lista-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item-carrito {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background-color: #e4f1f6;
+    border: 1px solid #9ecce0;
+    border-radius: 10px;
+    padding: 12px 15px;
+}
+
+.item-carrito img {
+    width: 110px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.item-carrito-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.item-carrito-info h3 {
+    color: #032533;
+    font-size: 1.15em;
+}
+
+.item-carrito-info p {
+    color: #0a3a4d;
+    font-size: 0.95em;
+}
+
+.item-carrito-precio {
+    font-weight: bold;
+    color: #032533 !important;
+}
+
+.btn-quitar {
+    background-color: #dc2626;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-quitar:hover {
+    background-color: #b91c1c;
+}
+
+.carrito-vacio {
+    text-align: center;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: #0a3a4d;
+    font-size: 1.1em;
 }
 
 /* ==========================================================
@@ -998,84 +1074,8 @@ body.oscuro .login-btn:hover {
 body.oscuro .link-sutil {
     color: #8fd3ec;
 }
-.carrito-header {
-    text-decoration: none;
-}
 
-.lista-carrito {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.item-carrito {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-    background-color: #e4f1f6;
-    border: 1px solid #9ecce0;
-    border-radius: 10px;
-    padding: 12px 15px;
-}
-
-.item-carrito img {
-    width: 110px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 6px;
-    flex-shrink: 0;
-}
-
-.item-carrito-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.item-carrito-info h3 {
-    color: #032533;
-    font-size: 1.15em;
-}
-
-.item-carrito-info p {
-    color: #0a3a4d;
-    font-size: 0.95em;
-}
-
-.item-carrito-precio {
-    font-weight: bold;
-    color: #032533 !important;
-}
-
-.btn-quitar {
-    background-color: #dc2626;
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    padding: 8px 14px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.btn-quitar:hover {
-    background-color: #b91c1c;
-}
-
-.carrito-vacio {
-    text-align: center;
-    padding: 30px 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    color: #0a3a4d;
-    font-size: 1.1em;
-}
-
-/* Modo oscuro para carrito.html */
+/* Carrito y Detalle de Paquetes en modo oscuro */
 body.oscuro .diseño-paq {
     background-color: rgba(30, 38, 46, 0.94);
     border-color: #2c3e4a;
@@ -1098,4 +1098,60 @@ body.oscuro .paquete-precio,
 body.oscuro .item-carrito {
     background-color: #12202a;
     border-color: #3a5260;
+}
+
+body.oscuro .titulo-paq {
+    color: #8fd3ec;
+}
+
+body.oscuro .lista-detalles {
+    color: #e6eef2;
+}
+
+body.oscuro .lista-detalles strong {
+    color: #8fd3ec;
+}
+
+body.oscuro .metodos-pago {
+    background-color: #182935;
+    border-color: #3a5260;
+}
+
+body.oscuro .metodos-pago h3 {
+    background-color: #0b151c;
+    color: #8fd3ec;
+    border: 1px solid #3a5260;
+}
+
+body.oscuro .metodos-pago ul {
+    color: #d6e4eb;
+}
+
+/* Mi Cuenta y Mi Admin en modo oscuro */
+body.oscuro .panel-cuenta {
+    background-color: rgba(30, 38, 46, 0.94);
+    border-color: #2c3e4a;
+}
+
+body.oscuro .tarjeta-datos,
+body.oscuro .tarjeta-fav {
+    background-color: #12202a;
+    border-color: #3a5260;
+}
+
+body.oscuro .tarjeta-datos h2,
+body.oscuro .tarjeta-fav h2,
+body.oscuro .datos-lista p,
+body.oscuro .item-fav h3 {
+    color: #e6eef2;
+}
+
+body.oscuro .item-fav {
+    background-color: #182935;
+    border-color: #3a5260;
+}
+
+body.oscuro .admin-listado h2 {
+    background-color: rgba(22, 36, 46, 0.92);
+    color: #e6eef2;
 }

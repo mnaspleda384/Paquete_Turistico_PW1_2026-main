@@ -9,51 +9,67 @@
 </head>
 <body>
     <header>
-        <img src="./Imagenes/logoprueba.png" 
+        <img src="./Imagenes/logoprueba.png"
             alt="Luma - Viajes que empiezan antes de partir"
             width="350" class="logo">
-
+ 
         <div class="tema">
             <input type="radio" id="tema-oscuro" name="tema">
             <label for="tema-oscuro">
                 <img src="./Imagenes/luna.svg" alt="Tema oscuro" width="24">
             </label>
-            
+           
             <input type="radio" id="tema-claro" name="tema" checked>
             <label for="tema-claro">
                 <img src="./Imagenes/sol.svg" alt="Tema claro" width="24">
             </label>
         </div>
     </header>
-
+ 
     <main>
         <section class="iniciar-sesion">
             <div class="contenedor-h1">
                 <h1>Iniciar sesión</h1>
             </div>
-            
+           
             <form class="login-container" method="post" action="usuario.html">
                 <div class="grupo-form">
                     <label class="login-label" for="usuario">Usuario:</label>
                     <input class="login-input" type="text" id="usuario" name="username" placeholder="Ingresa tu usuario" required>
                 </div>
-            
+           
                 <div class="grupo-form">
                     <label class="login-label" for="contrasena">Contraseña:</label>
                     <input class="login-input" type="password" id="contrasena" name="password" placeholder="••••••••" required>
                 </div>
-                
-                <button type="submit" class="login-btn">Ingresar</button> 
+               
+                <button type="submit" class="login-btn">Ingresar</button>
             </form>
         </section>
-
+ 
         <section class="primera-vez">
             <h2 class="titulo-inicio">¿Primera vez en Luma?</h2>
             <p class="parrafo-inicio">Para comenzar, es necesario crear el primer usuario.</p>
             <a href="crearUsuario.html" class="boton_secundario">Crear usuario</a>
         </section>
+ 
+        <section class="carrusel" aria-labelledby="titulo-carrusel">
+            <h2 class="titulo-carrusel" id="titulo-carrusel">Paquetes imperdibles</h2>
+ 
+            <div class="carrusel-contenedor">
+                <button type="button" class="carrusel-flecha anterior" id="carrusel-anterior" aria-label="Ver paquetes anteriores">&#8249;</button>
+ 
+                <div class="carrusel-pista" id="carrusel-pista">
+                    <!-- Las tarjetas se crean desde codigo.js -->
+                </div>
+ 
+                <button type="button" class="carrusel-flecha siguiente" id="carrusel-siguiente" aria-label="Ver más paquetes">&#8250;</button>
+            </div>
+ 
+            <div class="carrusel-puntos" id="carrusel-puntos"></div>
+        </section>
     </main>
-
+ 
     <footer id="footer">
         <h2>Contacto</h2>
         <ul class="contacto">

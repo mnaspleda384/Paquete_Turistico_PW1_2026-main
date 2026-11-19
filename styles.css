@@ -1,10 +1,11 @@
+
 * {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
     box-sizing: border-box;
 }
-
+ 
 body {
     display: flex;
     flex-direction: column;
@@ -12,7 +13,7 @@ body {
     background-color: #d8ecf3;
     color: #020202;
 }
-
+ 
 /* Header idéntico al original */
 header {
     display: flex;
@@ -24,33 +25,33 @@ header {
     flex-wrap: wrap;
     gap: 15px;
 }
-
+ 
 header .logo {
     width: 250px;
     max-width: 100%;
     height: auto;
 }
-
+ 
 header * {
     flex-shrink: 1;
 }
-
+ 
 .tema {
     font-size: 0.9em;
     color: #032533;
     font-weight: bold;
 }
-
+ 
 .tema img {
     cursor: pointer;
 }
-
+ 
 .navegacion {
     display: flex;
     margin-top: 0;
     gap: 5px;
 }
-
+ 
 .navegacion a {
     text-decoration: none;
     padding: 10px 15px;
@@ -59,28 +60,28 @@ header * {
     font-size: 15px;
     font-weight: bold;
 }
-
+ 
 .navegacion a:hover {
     background-color: #4586a0;
 }
-
+ 
 .usuario-header {
     display: flex;
     align-items: center;
     gap: 8px;
 }
-
+ 
 .usuario-header p {
     font-weight: bold;
     color: rgb(16, 68, 48);
     font-size: 14px;
     gap: 5px;
 }
-
+ 
 .img-usuario {
     width: 50px;
 }
-
+ 
 /* Main con fondo en la paleta celeste/azul petróleo del sitio (no blanco) y foto nítida */
 main {
     flex: 1;
@@ -95,7 +96,7 @@ main {
     background-position: center;
     background-attachment: fixed;
 }
-
+ 
 /* Footer */
 footer {
     background-color: #e4f1f6;
@@ -108,14 +109,14 @@ footer {
     text-align: center;
     color: #032533;
 }
-
+ 
 footer h2 {
     font-size: 18px;
     font-weight: 600;
     color: #032533;
     margin-bottom: 15px;
 }
-
+ 
 footer ul.contacto {
     list-style: none;
     padding: 0;
@@ -127,19 +128,19 @@ footer ul.contacto {
     font-size: 14px;
     line-height: 2.0;
 }
-
+ 
 footer ul.contacto a {
     color: #0a3a4d;
     font-weight: bold;
     text-decoration: none;
     transition: color 0.2s ease;
 }
-
+ 
 footer ul.contacto a:hover {
     text-decoration: underline;
     color: #4586a0;
 }
-
+ 
 /* Formularios unificados estilo inicio.html (Inicio, Crear Usuario, Mi Admin) */
 .iniciar-sesion,
 .tarjeta-registro,
@@ -155,19 +156,19 @@ footer ul.contacto a:hover {
     flex-direction: column;
     gap: 20px;
 }
-
+ 
 .admin-formulario {
     max-width: 650px;
     margin: 0 auto;
 }
-
+ 
 .contenedor-h1,
 .cabecera-registro {
     text-align: center;
     border-bottom: 2px solid #67b8d8;
     padding-bottom: 12px;
 }
-
+ 
 .contenedor-h1 h1,
 .cabecera-registro h1,
 .admin-formulario h2 {
@@ -175,24 +176,24 @@ footer ul.contacto a:hover {
     font-size: 1.6em;
     margin-bottom: 5px;
 }
-
+ 
 .cabecera-registro p {
     color: #0a3a4d;
     font-size: 0.95em;
 }
-
+ 
 .login-container {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
-
+ 
 .fila-form {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
-
+ 
 @media (min-width: 768px) {
     .fila-form.dos-columnas {
         flex-direction: row;
@@ -201,21 +202,21 @@ footer ul.contacto a:hover {
         flex: 1;
     }
 }
-
+ 
 .grupo-form {
     display: flex;
     flex-direction: column;
     gap: 6px;
     text-align: left;
 }
-
+ 
 .login-label {
     font-size: 14px;
     font-weight: 600;
     color: #032533;
     display: block;
 }
-
+ 
 .login-input {
     width: 100%;
     padding: 12px;
@@ -226,13 +227,13 @@ footer ul.contacto a:hover {
     color: #032533;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-
+ 
 .login-input:focus {
     border-color: #032533;
     box-shadow: 0 0 0 2px rgba(103, 184, 216, 0.35);
     outline: none;
 }
-
+ 
 .login-btn {
     margin-top: 10px;
     padding: 12px 20px;
@@ -246,29 +247,29 @@ footer ul.contacto a:hover {
     transition: background-color 0.3s ease, transform 0.1s ease;
     width: 100%;
 }
-
+ 
 .login-btn:hover {
     background-color: #4586a0;
 }
-
+ 
 .login-btn:active {
     transform: scale(0.98);
 }
-
+ 
 .acciones-form {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
     margin-top: 10px;
 }
-
+ 
 .acciones-form .login-btn,
 .acciones-form .boton_secundario {
     flex: 1;
     margin-top: 0;
     text-align: center;
 }
-
+ 
 .acciones-registro {
     display: flex;
     flex-direction: column;
@@ -276,7 +277,7 @@ footer ul.contacto a:hover {
     gap: 15px;
     margin-top: 5px;
 }
-
+ 
 .link-sutil {
     color: #0a3a4d;
     text-decoration: none;
@@ -284,12 +285,12 @@ footer ul.contacto a:hover {
     font-size: 0.95em;
     transition: color 0.3s;
 }
-
+ 
 .link-sutil:hover {
     color: #4586a0;
     text-decoration: underline;
 }
-
+ 
 .primera-vez {
     background-color: rgba(244, 249, 251, 0.94);
     max-width: 480px;
@@ -304,7 +305,7 @@ footer ul.contacto a:hover {
     text-align: center;
     gap: 12px;
 }
-
+ 
 .titulo-inicio {
     font-size: 24px;
     margin: 0;
@@ -313,20 +314,20 @@ footer ul.contacto a:hover {
     padding: 8px 22px;
     border-radius: 8px;
 }
-
+ 
 .primera-vez .titulo-inicio {
     background-color: transparent;
     padding: 0;
     font-size: 22px;
 }
-
+ 
 .parrafo-inicio {
     font-size: 15px;
     color: #0a3a4d;
     margin: 0;
     line-height: 1.5;
 }
-
+ 
 .boton_secundario {
     display: inline-block;
     padding: 12px 20px;
@@ -340,11 +341,11 @@ footer ul.contacto a:hover {
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
-
+ 
 .boton_secundario:hover {
     background-color: #032533;
 }
-
+ 
 /* Página usuario y tarjetas de paquetes */
 .controles-vista {
     display: flex;
@@ -359,7 +360,7 @@ footer ul.contacto a:hover {
     color: #032533;
     font-weight: bold;
 }
-
+ 
 .tarjetas {
     display: flex;
     justify-content: center;
@@ -369,7 +370,7 @@ footer ul.contacto a:hover {
     width: 100%;
     max-width: 1200px;
 }
-
+ 
 .tarjetas article {
     width: 325px;
     background-color: rgba(244, 249, 251, 0.96);
@@ -382,7 +383,7 @@ footer ul.contacto a:hover {
     flex-direction: column;
     gap: 10px;
 }
-
+ 
 .tarjetas article h2,
 .tarjetas article h3,
 .tarjetas article p,
@@ -390,32 +391,32 @@ footer ul.contacto a:hover {
 .contenido-paquete {
     padding: 0 15px;
 }
-
+ 
 .tarjetas article h2,
 .tarjetas article h3 {
     color: #032533;
 }
-
+ 
 .contenido-paquete {
     display: flex;
     flex-direction: column;
     gap: 8px;
     padding-top: 10px;
 }
-
+ 
 .tarjetas img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
-
+ 
 .tarjetas li {
     list-style-type: none;
     font-style: oblique;
     font-weight: bold;
     color: #0a3a4d;
 }
-
+ 
 .tarjetas button {
     margin: 5px 15px 0 15px;
     padding: 0.65em 1em;
@@ -427,18 +428,18 @@ footer ul.contacto a:hover {
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
-
+ 
 .tarjetas button:hover {
     background-color: #4586a0;
 }
-
+ 
 .tarjetas label,
 .tarjetas input[type="checkbox"] {
     margin-left: 15px;
     color: #032533;
     font-weight: 600;
 }
-
+ 
 /* Detalle de Paquetes */
 .diseño-paq {
     display: flex;
@@ -453,19 +454,19 @@ footer ul.contacto a:hover {
     border: 1px solid #67b8d8;
     box-shadow: 0 8px 20px rgba(3, 37, 51, 0.2);
 }
-
+ 
 @media (min-width: 850px) {
     .diseño-paq {
         flex-direction: row;
         align-items: flex-start;
     }
 }
-
+ 
 .paquete-info {
     flex: 2;
     min-width: 0;
 }
-
+ 
 .paquete-precio {
     flex: 1;
     background-color: #e4f1f6;
@@ -476,14 +477,14 @@ footer ul.contacto a:hover {
     flex-direction: column;
     gap: 20px;
 }
-
+ 
 .paquete-precio h2 {
     color: #032533;
     font-size: 1.4em;
     border-bottom: 2px solid #67b8d8;
     padding-bottom: 8px;
 }
-
+ 
 .img-detalle {
     width: 100%;
     height: auto;
@@ -492,26 +493,26 @@ footer ul.contacto a:hover {
     border-radius: 8px;
     margin-bottom: 25px;
 }
-
+ 
 .titulo-paq {
     color: #0a3a4d;
     margin-bottom: 20px;
     font-size: 2em;
 }
-
+ 
 .paquete-info h2 {
     color: #033141;
     margin: 30px 0 15px 0;
     border-bottom: 2px solid #67b8d8;
     padding-bottom: 5px;
 }
-
+ 
 .lista-detalles {
     list-style: none;
     line-height: 1.8;
     color: #032533;
 }
-
+ 
 .caja-valores p {
     display: flex;
     justify-content: space-between;
@@ -520,7 +521,7 @@ footer ul.contacto a:hover {
     font-size: 1.05em;
     color: #032533;
 }
-
+ 
 /* Botón Comprar mejorado */
 .boton-principal {
     width: 100%;
@@ -536,24 +537,24 @@ footer ul.contacto a:hover {
     box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
     transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
-
+ 
 .boton-principal:hover {
     background: linear-gradient(135deg, #059669 0%, #047857 100%);
     box-shadow: 0 6px 16px rgba(5, 150, 105, 0.45);
     transform: translateY(-2px);
 }
-
+ 
 .boton-principal:active {
     transform: translateY(0);
 }
-
+ 
 .metodos-pago {
     background-color: #f4f9fb;
     border: 1px solid #9ecce0;
     border-radius: 10px;
     padding: 15px 20px;
 }
-
+ 
 .metodos-pago h3 {
     font-size: 1em;
     color: #ffffff;
@@ -562,14 +563,14 @@ footer ul.contacto a:hover {
     border-radius: 6px;
     margin-bottom: 12px;
 }
-
+ 
 .metodos-pago ul {
     list-style: none;
     font-size: 0.9em;
     color: #0a3a4d;
     line-height: 1.7;
 }
-
+ 
 /* Mi Cuenta */
 .panel-cuenta {
     display: flex;
@@ -584,7 +585,7 @@ footer ul.contacto a:hover {
     border: 1px solid #67b8d8;
     box-shadow: 0 8px 20px rgba(3, 37, 51, 0.2);
 }
-
+ 
 @media (min-width: 768px) {
     .panel-cuenta {
         flex-direction: row;
@@ -597,7 +598,7 @@ footer ul.contacto a:hover {
         flex: 2;
     }
 }
-
+ 
 .tarjeta-datos,
 .tarjeta-fav {
     background-color: #e4f1f6;
@@ -605,7 +606,7 @@ footer ul.contacto a:hover {
     border-radius: 10px;
     border: 1px solid #67b8d8;
 }
-
+ 
 .tarjeta-datos h2,
 .tarjeta-fav h2 {
     color: #032533;
@@ -613,20 +614,20 @@ footer ul.contacto a:hover {
     border-bottom: 2px solid #67b8d8;
     padding-bottom: 10px;
 }
-
+ 
 .datos-lista p {
     margin-bottom: 15px;
     color: #032533;
     font-size: 1.05em;
     overflow-wrap: anywhere;
 }
-
+ 
 .grilla-fav {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
 }
-
+ 
 .item-fav {
     background-color: #f4f9fb;
     border: 1px solid #9ecce0;
@@ -635,19 +636,19 @@ footer ul.contacto a:hover {
     box-shadow: 0 4px 10px rgba(3, 37, 51, 0.14);
     text-align: center;
 }
-
+ 
 .item-fav img {
     width: 100%;
     height: 130px;
     object-fit: cover;
 }
-
+ 
 .item-fav h3 {
     font-size: 1.15em;
     color: #032533;
     padding: 12px 10px;
 }
-
+ 
 .boton-principal-micuenta {
     background-color: #032533;
     color: #ffffff;
@@ -662,11 +663,11 @@ footer ul.contacto a:hover {
     margin-top: 10px;
     transition: background-color 0.2s ease;
 }
-
+ 
 .boton-principal-micuenta:hover {
     background-color: #4586a0;
 }
-
+ 
 /* Mi Admin */
 .panel-admin {
     display: flex;
@@ -676,7 +677,7 @@ footer ul.contacto a:hover {
     max-width: 1200px;
     margin: 0 auto;
 }
-
+ 
 .admin-listado h2 {
     color: #032533;
     background-color: rgba(244, 249, 251, 0.92);
@@ -686,7 +687,7 @@ footer ul.contacto a:hover {
     border-bottom: 2px solid #67b8d8;
     text-align: center;
 }
-
+ 
 /* Responsive móvil */
 @media (max-width: 768px) {
     header {
@@ -705,7 +706,7 @@ footer ul.contacto a:hover {
         align-self: center;
     }
 }
-
+ 
 @media (max-width: 600px) {
     header .logo {
         width: 200px;
@@ -746,19 +747,19 @@ footer ul.contacto a:hover {
         padding: 15px;
     }
 }
-
+ 
 /* Clases dinámicas usadas por JS */
 .oscuro {
     background-color: #000;
     color: white;
 }
-
+ 
 .lista {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-
+ 
 .lista article {
     display: flex;
     flex-direction: row;
@@ -769,31 +770,32 @@ footer ul.contacto a:hover {
     gap: 20px;
     background-color: rgba(244, 249, 251, 0.96);
 }
-
+ 
 .lista article img {
     width: 160px;
     height: 120px;
 }
-
-/* Botón "Agregar al carrito" en la vista de lista */
+ 
+/* Botón "Agregar al carrito" en la vista de lista
+   (mismo color que en la vista de tarjetas) */
 .lista button {
-    margin-right: 25px;
+    margin-right: 25px;        /* espacio entre el botón y el borde derecho */
     padding: 0.65em 1.4em;
-    border-radius: 25px;
+    border-radius: 25px;       /* bordes bien redondeados */
     border: none;
     background-color: #032533;
     color: white;
     font-weight: bold;
-    white-space: nowrap;
-    flex-shrink: 0;
+    white-space: nowrap;       /* el texto queda en una sola línea */
+    flex-shrink: 0;            /* evita que el botón se achique */
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
-
+ 
 .lista button:hover {
     background-color: #4586a0;
 }
-
+ 
 /* ==========================================================
    Carrito en el header (al lado de la luna)
    ========================================================== */
@@ -802,7 +804,7 @@ footer ul.contacto a:hover {
     align-items: center;
     gap: 14px;
 }
-
+ 
 .carrito-header {
     position: relative;
     display: flex;
@@ -812,14 +814,13 @@ footer ul.contacto a:hover {
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    text-decoration: none;
     transition: background-color 0.2s ease;
 }
-
+ 
 .carrito-header:hover {
     background-color: rgba(255, 255, 255, 0.3);
 }
-
+ 
 .contador-carrito {
     position: absolute;
     top: -4px;
@@ -835,93 +836,17 @@ footer ul.contacto a:hover {
     line-height: 20px;
     text-align: center;
 }
-
+ 
 .rebote {
     animation: rebote 0.4s ease;
 }
-
+ 
 @keyframes rebote {
     50% {
         transform: scale(1.35);
     }
 }
-
-/* ==========================================================
-   Página del Carrito (carrito.html)
-   ========================================================== */
-.lista-carrito {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.item-carrito {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-    background-color: #e4f1f6;
-    border: 1px solid #9ecce0;
-    border-radius: 10px;
-    padding: 12px 15px;
-}
-
-.item-carrito img {
-    width: 110px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 6px;
-    flex-shrink: 0;
-}
-
-.item-carrito-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.item-carrito-info h3 {
-    color: #032533;
-    font-size: 1.15em;
-}
-
-.item-carrito-info p {
-    color: #0a3a4d;
-    font-size: 0.95em;
-}
-
-.item-carrito-precio {
-    font-weight: bold;
-    color: #032533 !important;
-}
-
-.btn-quitar {
-    background-color: #dc2626;
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    padding: 8px 14px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.btn-quitar:hover {
-    background-color: #b91c1c;
-}
-
-.carrito-vacio {
-    text-align: center;
-    padding: 30px 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    color: #0a3a4d;
-    font-size: 1.1em;
-}
-
+ 
 /* ==========================================================
    Modo oscuro (la clase "oscuro" la agrega codigo.js en el <body>)
    ========================================================== */
@@ -929,75 +854,75 @@ body.oscuro {
     background-color: #0b151c;
     color: #e6eef2;
 }
-
+ 
 /* Header y footer */
 body.oscuro header {
     background-color: #0e1c26;
 }
-
+ 
 body.oscuro .navegacion a,
 body.oscuro .usuario-header p,
 body.oscuro .tema {
     color: #e6eef2;
 }
-
+ 
 body.oscuro .navegacion a:hover {
     background-color: #1f3a4a;
 }
-
+ 
 /* Íconos negros (luna, sol, carrito) pasan a blancos */
 body.oscuro .tema img,
 body.oscuro .carrito-header img {
     filter: invert(1);
 }
-
+ 
 body.oscuro .carrito-header:hover {
     background-color: rgba(255, 255, 255, 0.12);
 }
-
+ 
 body.oscuro .contador-carrito {
     background-color: #67b8d8;
     color: #032533;
 }
-
+ 
 body.oscuro footer {
     background-color: #0e1c26;
     border-top-color: #4586a0;
     color: #e6eef2;
 }
-
+ 
 body.oscuro footer h2 {
     color: #e6eef2;
 }
-
+ 
 body.oscuro footer ul.contacto a {
     color: #8fd3ec;
 }
-
+ 
 /* Fondo de la página más oscuro */
 body.oscuro main {
     background-color: #0b151c;
     background-image: linear-gradient(rgba(5, 15, 22, 0.72), rgba(5, 15, 22, 0.82)), url('./Imagenes/fondoInicioPrincipal.jpg');
 }
-
+ 
 /* Títulos y controles */
 body.oscuro .titulo-inicio,
 body.oscuro .controles-vista {
     background-color: rgba(22, 36, 46, 0.92);
     color: #e6eef2;
 }
-
+ 
 body.oscuro .controles-vista {
     border-color: #8a9aa5;
 }
-
+ 
 /* Tarjetas y vista de lista */
 body.oscuro .tarjetas article,
 body.oscuro .lista article {
     background-color: rgba(30, 38, 46, 0.94);
     border-color: #2c3e4a;
 }
-
+ 
 body.oscuro .tarjetas article h2,
 body.oscuro .tarjetas article p,
 body.oscuro .tarjetas li,
@@ -1008,19 +933,19 @@ body.oscuro .lista li,
 body.oscuro .lista label {
     color: #e6eef2;
 }
-
+ 
 body.oscuro .tarjetas button,
 body.oscuro .lista button {
     background-color: #0b1d26;
     border: 1.5px solid #cfe3ea;
     color: #ffffff;
 }
-
+ 
 body.oscuro .tarjetas button:hover,
 body.oscuro .lista button:hover {
     background-color: #4586a0;
 }
-
+ 
 /* Formularios: Crear usuario, Iniciar sesión y Mi Admin */
 body.oscuro .iniciar-sesion,
 body.oscuro .tarjeta-registro,
@@ -1029,12 +954,12 @@ body.oscuro .primera-vez {
     background-color: rgba(30, 38, 46, 0.94);
     border-color: #2c3e4a;
 }
-
+ 
 body.oscuro .contenedor-h1,
 body.oscuro .cabecera-registro {
     border-bottom-color: #4586a0;
 }
-
+ 
 body.oscuro .contenedor-h1 h1,
 body.oscuro .cabecera-registro h1,
 body.oscuro .admin-formulario h2,
@@ -1042,116 +967,268 @@ body.oscuro .primera-vez .titulo-inicio,
 body.oscuro .login-label {
     color: #e6eef2;
 }
-
+ 
 body.oscuro .cabecera-registro p,
 body.oscuro .parrafo-inicio {
     color: #b7c7cf;
 }
-
+ 
 body.oscuro .login-input {
     background-color: #12202a;
     border-color: #3a5260;
     color: #e6eef2;
 }
-
+ 
 body.oscuro .login-input::placeholder {
     color: #8aa0ab;
 }
-
+ 
 body.oscuro .login-input:focus {
     border-color: #67b8d8;
 }
-
+ 
 body.oscuro .login-btn {
     background-color: #0b1d26;
     border: 1.5px solid #cfe3ea;
 }
-
+ 
 body.oscuro .login-btn:hover {
     background-color: #4586a0;
 }
-
+ 
 body.oscuro .link-sutil {
     color: #8fd3ec;
 }
-
-/* Carrito y Detalle de Paquetes en modo oscuro */
-body.oscuro .diseño-paq {
+ 
+/* ==========================================================
+   Carrusel de paquetes (inicio.html)
+   Se ven 3 tarjetas completas y asoma una parte de la siguiente
+   (ley de continuidad), para que se note que hay más paquetes.
+   ========================================================== */
+.carrusel {
+    width: 100%;
+    max-width: 860px;
+    background-color: rgba(244, 249, 251, 0.94);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #67b8d8;
+    box-shadow: 0 8px 20px rgba(3, 37, 51, 0.18);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+ 
+.titulo-carrusel {
+    color: #032533;
+    font-size: 22px;
+}
+ 
+.carrusel-contenedor {
+    position: relative;
+}
+ 
+.carrusel-pista {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;                 /* permite deslizar (también con el dedo) */
+    scroll-snap-type: x mandatory;    /* cada tarjeta "encaja" al deslizar */
+    padding: 4px 2px 10px;
+    scrollbar-width: none;            /* oculta la barra de scroll (Firefox) */
+}
+ 
+.carrusel-pista::-webkit-scrollbar {
+    display: none;                    /* oculta la barra de scroll (Chrome) */
+}
+ 
+/* Celular: 1 tarjeta y se asoma la siguiente */
+.carrusel-tarjeta {
+    flex: 0 0 calc((100% - 18px) / 1.25);
+    scroll-snap-align: start;
+    background-color: #ffffff;
+    border: 1px solid #dbe5e9;
+    border-radius: 14px;
+    padding: 6px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+ 
+.carrusel-tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(3, 37, 51, 0.15);
+}
+ 
+.carrusel-tarjeta a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+ 
+.carrusel-tarjeta img {
+    display: block;
+    width: 100%;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+ 
+.carrusel-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 6px 6px;
+}
+ 
+.carrusel-categoria {
+    font-size: 12px;
+    color: #6b7b83;
+}
+ 
+.carrusel-texto h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #032533;
+}
+ 
+.carrusel-detalle {
+    font-size: 12px;
+    color: #6b7b83;
+    margin-bottom: 10px;
+}
+ 
+.carrusel-etiqueta-precio {
+    font-size: 12px;
+    color: #24343b;
+}
+ 
+.carrusel-precio {
+    font-size: 16px;
+    font-weight: bold;
+    color: #032533;
+}
+ 
+/* Flechas */
+.carrusel-flecha {
+    position: absolute;
+    top: 38%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid #dbe5e9;
+    background-color: #ffffff;
+    color: #032533;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(3, 37, 51, 0.2);
+    transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+ 
+.carrusel-flecha:hover {
+    background-color: #032533;
+    color: #ffffff;
+}
+ 
+.carrusel-flecha.anterior {
+    left: -12px;
+}
+ 
+.carrusel-flecha.siguiente {
+    right: -12px;
+}
+ 
+/* Clase que agrega codigo.js cuando no hay más para ver en ese sentido */
+.carrusel-flecha.oculta {
+    opacity: 0;
+    pointer-events: none;
+}
+ 
+/* Puntos indicadores */
+.carrusel-puntos {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+ 
+.carrusel-puntos button {
+    width: 8px;
+    height: 6px;
+    padding: 0;
+    border: none;
+    border-radius: 3px;
+    background-color: #cfdde3;
+    cursor: pointer;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+ 
+.carrusel-puntos button.activo {
+    width: 22px;
+    background-color: #032533;
+}
+ 
+/* Tablet: 2 tarjetas y se asoma la tercera */
+@media (min-width: 600px) {
+    .carrusel-tarjeta {
+        flex-basis: calc((100% - 36px) / 2.25);
+    }
+}
+ 
+/* Escritorio: 3 tarjetas y se asoma la cuarta */
+@media (min-width: 900px) {
+    .carrusel-tarjeta {
+        flex-basis: calc((100% - 54px) / 3.25);
+    }
+}
+ 
+@media (max-width: 600px) {
+    .carrusel {
+        padding: 15px;
+    }
+    .carrusel-flecha.anterior {
+        left: -6px;
+    }
+    .carrusel-flecha.siguiente {
+        right: -6px;
+    }
+}
+ 
+/* Carrusel en modo oscuro */
+body.oscuro .carrusel {
     background-color: rgba(30, 38, 46, 0.94);
     border-color: #2c3e4a;
 }
-
-body.oscuro .paquete-info h2,
-body.oscuro .paquete-precio h2,
-body.oscuro .caja-valores p,
-body.oscuro .item-carrito-info h3,
-body.oscuro .item-carrito-precio {
-    color: #e6eef2 !important;
-}
-
-body.oscuro .item-carrito-info p,
-body.oscuro .carrito-vacio {
-    color: #b7c7cf;
-}
-
-body.oscuro .paquete-precio,
-body.oscuro .item-carrito {
-    background-color: #12202a;
-    border-color: #3a5260;
-}
-
-body.oscuro .titulo-paq {
-    color: #8fd3ec;
-}
-
-body.oscuro .lista-detalles {
+ 
+body.oscuro .titulo-carrusel,
+body.oscuro .carrusel-texto h3,
+body.oscuro .carrusel-etiqueta-precio,
+body.oscuro .carrusel-precio {
     color: #e6eef2;
 }
-
-body.oscuro .lista-detalles strong {
-    color: #8fd3ec;
-}
-
-body.oscuro .metodos-pago {
-    background-color: #182935;
-    border-color: #3a5260;
-}
-
-body.oscuro .metodos-pago h3 {
-    background-color: #0b151c;
-    color: #8fd3ec;
-    border: 1px solid #3a5260;
-}
-
-body.oscuro .metodos-pago ul {
-    color: #d6e4eb;
-}
-
-/* Mi Cuenta y Mi Admin en modo oscuro */
-body.oscuro .panel-cuenta {
-    background-color: rgba(30, 38, 46, 0.94);
+ 
+body.oscuro .carrusel-tarjeta {
+    background-color: #16222b;
     border-color: #2c3e4a;
 }
-
-body.oscuro .tarjeta-datos,
-body.oscuro .tarjeta-fav {
-    background-color: #12202a;
-    border-color: #3a5260;
+ 
+body.oscuro .carrusel-categoria,
+body.oscuro .carrusel-detalle {
+    color: #9fb3bb;
 }
-
-body.oscuro .tarjeta-datos h2,
-body.oscuro .tarjeta-fav h2,
-body.oscuro .datos-lista p,
-body.oscuro .item-fav h3 {
+ 
+body.oscuro .carrusel-flecha {
+    background-color: #0e1c26;
+    border-color: #2c3e4a;
     color: #e6eef2;
 }
-
-body.oscuro .item-fav {
-    background-color: #182935;
-    border-color: #3a5260;
+ 
+body.oscuro .carrusel-flecha:hover {
+    background-color: #4586a0;
 }
-
-body.oscuro .admin-listado h2 {
-    background-color: rgba(22, 36, 46, 0.92);
-    color: #e6eef2;
+ 
+body.oscuro .carrusel-puntos button {
+    background-color: #3a5260;
+}
+ 
+body.oscuro .carrusel-puntos button.activo {
+    background-color: #67b8d8;
 }

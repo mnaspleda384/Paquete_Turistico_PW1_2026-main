@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="codigo.js" defer></script>
+    <title>Luma - Mi Carrito</title>
+</head>
+<body>
+    <header>
+        <a href="usuario.html">
+            <img src="./Imagenes/logoprueba.png"
+            alt="Luma - Viajes que empiezan antes de partir"
+            width="300" class="logo">
+        </a>
+            
+        <nav class="navegacion">
+            <a href="usuario.html">Paquetes</a>
+            <a href="miCuenta.html">Mi cuenta</a>
+            <a href="miAdmin.html">Cambiar a Administrador</a>
+            <a href="inicio.html">Cerrar sesión</a>
+        </nav>
+            
+        <div class="herramientas-header">
+            <a href="carrito.html" class="carrito-header" id="boton-carrito" aria-label="Ver carrito">
+                <img src="./Imagenes/carrito.png" alt="" width="26">
+                <span class="contador-carrito" id="contador-carrito">0</span>
+            </a>
+
+            <div class="tema">
+                <input type="radio" id="tema-oscuro" name="tema">
+                <label for="tema-oscuro">
+                    <img src="./Imagenes/luna.svg" alt="Tema oscuro" width="24">
+                </label>
+                
+                <input type="radio" id="tema-claro" name="tema" checked>
+                <label for="tema-claro">
+                    <img src="./Imagenes/sol.svg" alt="Tema claro" width="24">
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="titulo-inicio">Mi Carrito de Compras</h1>
+
+        <div class="diseño-paq">
+            <section class="paquete-info">
+                <h2>Paquetes seleccionados</h2>
+                <div id="lista-carrito" class="lista-carrito">
+                    <!-- Los paquetes agregados se cargan aquí automáticamente con JS -->
+                </div>
+            </section>
+
+            <section class="paquete-precio" aria-labelledby="titulo-resumen-carrito">
+                <h2 id="titulo-resumen-carrito">Resumen del pedido</h2>
+
+                <div class="caja-valores">
+                    <p>Cantidad de paquetes: <span id="carrito-cantidad">0</span></p>
+                    <p><strong>Total a pagar:</strong> <span id="carrito-total">$ 0</span></p>
+                </div>
+
+                <button type="button" class="boton-principal" id="btn-finalizar-compra">Finalizar compra</button>
+                <button type="button" class="boton_secundario" id="btn-vaciar-carrito" style="width: 100%;">Vaciar carrito</button>
+            </section>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <h2>Contacto</h2>
+        <ul class="contacto">
+            <li>Email: <a href="mailto:contacto@luma.com">contacto@luma.com</a></li>
+            <li>WhatsApp: <a href="https://wa.me/541112345678">+54 11 1234-5678</a></li>
+            <li>Dirección: Av. Corrientes 1234, CABA</li>
+            <li>Horario: Lunes a Viernes de 9 a 18 h</li>
+        </ul>
+    </footer>
+</body>
+</html>

@@ -302,7 +302,7 @@ function renderizarPaquetesAdminEnUsuario() {
 }
  
 if (formNuevoPaquete) {
-    let imagenBase64 = "./Imagenes/fondoInicioPrincipal.jpg";
+    let imagenBase64 = "../Imagenes/fondoInicioPrincipal.jpg";
  
     if (btnAdjuntarImagen && inputImagenPaquete) {
         btnAdjuntarImagen.addEventListener("click", () => {
@@ -353,7 +353,7 @@ if (formNuevoPaquete) {
         renderizarPaquetesAdminEnAdmin();
  
         formNuevoPaquete.reset();
-        imagenBase64 = "./Imagenes/fondoInicioPrincipal.jpg";
+        imagenBase64 = "../Imagenes/fondoInicioPrincipal.jpg";
         if (nombreImagenSeleccionada) nombreImagenSeleccionada.textContent = "";
  
         alert("¡Paquete a " + destino + " cargado correctamente!");
@@ -638,7 +638,7 @@ if (carruselPista && carruselAnterior && carruselSiguiente && carruselPuntos) {
             destino: "Bariloche",
             detalle: "7 días · Vuelo + Hotel",
             precio: "$ 650.000",
-            imagen: "./Imagenes/fotoCentroBariloche.jpg",
+            imagen: "../Imagenes/fotoCentroBariloche.jpg",
             enlace: "PaqueteBariloche.html"
         },
         {
@@ -646,7 +646,7 @@ if (carruselPista && carruselAnterior && carruselSiguiente && carruselPuntos) {
             destino: "Cataratas del Iguazú",
             detalle: "5 días · Excursiones incluidas",
             precio: "$ 480.000",
-            imagen: "./Imagenes/Cataratas_del_Iguazú_en_Argentina.jpg",
+            imagen: "../Imagenes/Cataratas_del_Iguazú_en_Argentina.jpg",
             enlace: "PaqueteIguazu.html"
         },
         {
@@ -654,7 +654,7 @@ if (carruselPista && carruselAnterior && carruselSiguiente && carruselPuntos) {
             destino: "Cancún",
             detalle: "10 días · All Inclusive",
             precio: "$ 1.900.000",
-            imagen: "./Imagenes/Cancun.jpg",
+            imagen: "../Imagenes/Cancun.jpg",
             enlace: "PaqueteCancun.html"
         },
         {
@@ -662,7 +662,7 @@ if (carruselPista && carruselAnterior && carruselSiguiente && carruselPuntos) {
             destino: "Mendoza",
             detalle: "4 días · Bodegas y montaña",
             precio: "$ 390.000",
-            imagen: "./Imagenes/Mendoza.jpg",
+            imagen: "../Imagenes/Mendoza.jpg",
             enlace: "PaqueteMendoza.html"
         },
         {
@@ -670,7 +670,7 @@ if (carruselPista && carruselAnterior && carruselSiguiente && carruselPuntos) {
             destino: "Santa Cruz",
             detalle: "14 días · Glaciares",
             precio: "$ 2.000.000",
-            imagen: "./Imagenes/SantaCruz.jpg",
+            imagen: "../Imagenes/SantaCruz.jpg",
             enlace: "PaqueteSantaCruz.html"
         }
     ];

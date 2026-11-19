@@ -1,6 +1,4 @@
-/* ==========================================================
-   codigo.js — Funciones del sitio Luma
-   ========================================================== */
+/* Funciones del sitio Luma */
  
 const temaOscuro = document.getElementById("tema-oscuro");
 const temaClaro = document.getElementById("tema-claro");
@@ -34,13 +32,13 @@ const carruselSiguiente = document.getElementById("carrusel-siguiente");
 const carruselPuntos = document.getElementById("carrusel-puntos");
  
  
-/* ---------- Utilidades ---------- */
+/*  Utilidades  */
 function formatearPrecio(numero) {
     return "$ " + Number(numero).toLocaleString("es-AR");
 }
  
  
-/* ---------- Modo oscuro ---------- */
+/*  Modo oscuro  */
 function aplicarTema(tema) {
     if (tema === "oscuro") {
         document.body.classList.add("oscuro");
@@ -59,9 +57,7 @@ if (temaOscuro && temaClaro) {
 }
  
  
-/* ==========================================================
-   Gestión de Usuarios, Perfiles (Administrador / Usuario) y Sesión
-   ========================================================== */
+/* Gestión de Usuarios, Perfiles (Administrador / Usuario) y Sesión */
 function obtenerUsuarios() {
     return JSON.parse(localStorage.getItem("usuariosLuma")) || [];
 }
@@ -86,7 +82,7 @@ function cerrarSesion() {
     localStorage.removeItem("sesionLuma");
 }
  
-/* --- Página inicio.html: verificar primer Administrador e inicio de sesión --- */
+/* Página inicio.html: verificar primer Administrador e inicio de sesión */
 const tituloPrimerUsuario = document.getElementById("titulo-primer-usuario");
 const textoPrimerUsuario = document.getElementById("texto-primer-usuario");
 const btnCrearUsuario = document.getElementById("btn-crear-usuario");
@@ -108,7 +104,6 @@ if (formLogin) {
     formLogin.addEventListener("submit", (evento) => {
         evento.preventDefault();
  
-        // Verifica que exista al menos un usuario con perfil Administrador
         if (!existeAlMenosUnAdmin()) {
             alert(
                 "No existe ningún usuario con perfil Administrador. Por favor, creá el primer usuario con perfil Administrador."
@@ -140,7 +135,7 @@ if (formLogin) {
     });
 }
  
-/* --- Página crearUsuario.html: registro con perfil Administrador o Usuario --- */
+/* Página crearUsuario.html: registro con perfil Administrador o Usuario */
 if (formCrearUsuario) {
     const selectPerfil = document.getElementById("perfil");
     const subtituloRegistro = document.getElementById("subtitulo-registro");
@@ -189,18 +184,15 @@ if (formCrearUsuario) {
     });
 }
  
-/* --- Control de sesión y alternancia entre perfiles sin cerrar sesión --- */
 const sesionActual = obtenerSesionActual();
 const paginaActual = window.location.pathname.split("/").pop().toLowerCase();
  
 if (sesionActual) {
-    // Muestra el @usuario real en el header
     const nombreHeader = document.querySelector(".usuario-header p");
     if (nombreHeader) {
         nombreHeader.textContent = "@" + sesionActual.usuario;
     }
  
-    // Controla el acceso y el botón de alternar perfil según si es Administrador o Usuario
     const enlacesAdmin = document.querySelectorAll('.navegacion a[href="miAdmin.html"]');
     if (sesionActual.perfil !== "administrador") {
         // Si es Usuario común, oculta "Cambiar a Administrador" y bloquea el acceso directo a miAdmin.html
@@ -213,7 +205,6 @@ if (sesionActual) {
         }
     }
  
-    // Completa los datos en miCuenta.html si están los elementos
     const cuentaNombre = document.getElementById("cuenta-nombre");
     const cuentaApellido = document.getElementById("cuenta-apellido");
     const cuentaEmail = document.getElementById("cuenta-email");
@@ -235,8 +226,6 @@ document.querySelectorAll('.navegacion a[href="inicio.html"]').forEach((enlaceCe
     });
 });
  
- 
-/* ---------- Paquetes creados por el Administrador (miAdmin.html y usuario.html) ---------- */
 function obtenerPaquetesAdmin() {
     return JSON.parse(localStorage.getItem("paquetesAdmin")) || [];
 }
@@ -374,7 +363,7 @@ if (adminPaquetes) {
 }
  
  
-/* ---------- Vista tarjetas / lista (usuario.html) ---------- */
+/*  Vista tarjetas / lista  */
 if (resultados && vistaTarjetas && vistaLista) {
     vistaLista.addEventListener("change", () => {
         resultados.classList.remove("tarjetas");
@@ -388,7 +377,7 @@ if (resultados && vistaTarjetas && vistaLista) {
 }
  
  
-/* ---------- Favoritos (usuario.html y miCuenta.html) ---------- */
+/* Favoritos */
 function obtenerFavoritos() {
     return JSON.parse(localStorage.getItem("favoritos")) || [];
 }
@@ -476,7 +465,7 @@ if (listaFavoritos) {
 }
  
  
-/* ---------- Carrito ---------- */
+/*  Carrito  */
 function obtenerCarrito() {
     const guardado = JSON.parse(localStorage.getItem("carrito")) || [];
     const valido = guardado.filter(
@@ -630,7 +619,7 @@ if (btnFinalizarCompra) {
 actualizarContador();
  
  
-/* ---------- Carrusel de paquetes (inicio.html) ---------- */
+/*  Carrusel de paquetes  */
 if (carruselPista && carruselAnterior && carruselSiguiente && carruselPuntos) {
     const paquetesCarrusel = [
         {

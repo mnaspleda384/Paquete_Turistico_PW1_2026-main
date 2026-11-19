@@ -1629,6 +1629,10 @@ footer ul.contacto a:hover {
 .tarjetas article h3 {
     color: #032533;
 }
+
+body.oscuro .tarjetas article h3 {
+    color: #e6eef2;
+}
  
 .contenido-paquete {
     display: flex;

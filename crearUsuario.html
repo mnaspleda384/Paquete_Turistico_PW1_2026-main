@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,17 @@
     <script src="codigo.js" defer></script>
     <title>Luma - Crear Usuario</title>
 </head>
+
 <body>
     <header>
-        <img src="./Imagenes/logoprueba.png"
-            alt="Luma - Viajes que empiezan antes de partir"
-            width="350" class="logo">
+        <img src="./Imagenes/logoprueba.png" alt="Luma - Viajes que empiezan antes de partir" width="350" class="logo">
 
         <div class="tema">
             <input type="radio" id="tema-oscuro" name="tema">
             <label for="tema-oscuro">
                 <img src="./Imagenes/luna.svg" alt="Tema oscuro" width="24">
             </label>
-            
+
             <input type="radio" id="tema-claro" name="tema" checked>
             <label for="tema-claro">
                 <img src="./Imagenes/sol.svg" alt="Tema claro" width="24">
@@ -30,10 +30,9 @@
         <section class="tarjeta-registro">
             <div class="cabecera-registro">
                 <h1>Crear Usuario</h1>
-                <p>Completá tus datos para empezar a usar Luma.</p>
+                <p id="subtitulo-registro">Completá tus datos para empezar a usar Luma.</p>
             </div>
-    
-            <form class="login-container" action="inicio.html" method="post">
+            <form class="login-container" id="form-crear-usuario">
                 <div class="grupo-form">
                     <label class="login-label" for="nombre">Nombre:</label>
                     <input class="login-input" type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
@@ -41,29 +40,41 @@
 
                 <div class="grupo-form">
                     <label class="login-label" for="apellido">Apellido:</label>
-                    <input class="login-input" type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+                    <input class="login-input" type="text" id="apellido" name="apellido" placeholder="Tu apellido"
+                        required>
                 </div>
 
                 <div class="grupo-form">
                     <label class="login-label" for="mail">Email:</label>
-                    <input class="login-input" type="email" id="mail" name="mail" placeholder="ejemplo@correo.com" required>
+                    <input class="login-input" type="email" id="mail" name="mail" placeholder="ejemplo@correo.com"
+                        required>
                 </div>
 
                 <div class="grupo-form">
                     <label class="login-label" for="usuario">Usuario:</label>
-                    <input class="login-input" type="text" id="usuario" name="usuario" placeholder="Elegí un nombre de usuario" required>
+                    <input class="login-input" type="text" id="usuario" name="usuario"
+                        placeholder="Elegí un nombre de usuario" required>
+                </div>
+
+                <div class="grupo-form">
+                    <label class="login-label" for="perfil">Perfil:</label>
+                    <select class="login-input" id="perfil" name="perfil" required>
+                        <option value="administrador">Administrador</option>
+                        <option value="usuario">Usuario</option>
+                    </select>
                 </div>
 
                 <div class="grupo-form">
                     <label class="login-label" for="contrasena">Contraseña:</label>
-                    <input class="login-input" type="password" id="contrasena" name="contrasena" placeholder="••••••••" required>
+                    <input class="login-input" type="password" id="contrasena" name="contrasena" placeholder="••••••••"
+                        required>
                 </div>
 
                 <div class="grupo-form">
                     <label class="login-label" for="contrasena2">Repetir contraseña:</label>
-                    <input class="login-input" type="password" id="contrasena2" name="contrasena2" placeholder="••••••••" required>
+                    <input class="login-input" type="password" id="contrasena2" name="contrasena2"
+                        placeholder="••••••••" required>
                 </div>
-    
                 <div class="acciones-registro">
                     <button type="submit" class="login-btn">Registrarme</button>
                     <a href="inicio.html" class="link-sutil">Volver al inicio</a>
@@ -79,6 +90,6 @@
             <li>WhatsApp: <a href="Compartir en Whatsapp">+54 11 1234-5678</a></li>
             <li>Dirección: Av. Corrientes 1234, CABA</li>
             <li>Horario: Lunes a Viernes de 9 a 18 h</li>
-            </ul>
-            </footer>
+        </ul>
+    </footer>
 </body>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,12 @@
     <script src="codigo.js" defer></script>
     <title>@Usuario_1 Perfil</title>
 </head>
+
 <body>
     <header>
         <a href="usuario.html">
-            <img src="./Imagenes/logoprueba.png"
-            alt="Luma - Viajes que empiezan antes de partir"
-            width="300" class="logo">
+            <img src="./Imagenes/logoprueba.png" alt="Luma - Viajes que empiezan antes de partir" width="300"
+                class="logo">
         </a>
         <nav class="navegacion">
             <a href="miCuenta.html">Mi cuenta</a>
@@ -24,7 +25,7 @@
             <label for="tema-oscuro">
                 <img src="./Imagenes/luna.svg" alt="Tema oscuro" width="24">
             </label>
-            
+
             <input type="radio" id="tema-claro" name="tema" checked>
             <label for="tema-claro">
                 <img src="./Imagenes/sol.svg" alt="Tema claro" width="24">
@@ -32,9 +33,7 @@
         </div>
         <div class="usuario-header">
             <p>@Usuario_1</p>
-            <img src="./Imagenes/logopj.png"
-            alt="imagen descriptiva de usuario"
-            class="img-usuario">
+            <img src="./Imagenes/logopj.png" alt="imagen descriptiva de usuario" class="img-usuario">
         </div>
     </header>
 
@@ -42,12 +41,13 @@
         <div class="panel-cuenta">
             <section class="tarjeta-datos">
                 <h2>Datos Personales</h2>
-                <div class="datos-lista">
-                    <p><strong>Nombre:</strong> Lionel Andres</p>
-                    <p><strong>Apellido:</strong> Messi</p>
-                    <p><strong>Email:</strong> lmessi264@unlam.alumno.edu.ar</p>
+                <div class="datos-lista" id="datos-usuario-cuenta">
+                    <p><strong>Nombre:</strong> <span id="cuenta-nombre">Lionel Andres</span></p>
+                    <p><strong>Apellido:</strong> <span id="cuenta-apellido">Messi</span></p>
+                    <p><strong>Email:</strong> <span id="cuenta-email">lmessi264@unlam.alumno.edu.ar</span></p>
+                    <p><strong>Perfil:</strong> <span id="cuenta-perfil">Usuario</span></p>
                 </div>
-                
+
                 <button type="button" class="boton-principal-micuenta">Cambiar contraseña</button>
             </section>
 
@@ -70,4 +70,5 @@
         </ul>
     </footer>
 </body>
+
 </html>
